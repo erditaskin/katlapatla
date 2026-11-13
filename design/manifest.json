@@ -1,0 +1,20 @@
+{
+  "status": "design-candidates-awaiting-user-approval",
+  "tool": "built-in Imagegen",
+  "assets": [
+    {
+      "file": "references/01-balloon-palette-v1.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1841639,
+      "sha256": "2842cdeec7e616bb2ece68d7ac238d0e3dfa0fc5c69bb8b41145b8024f4204aa"
+    },
+    {
+      "file": "references/02-gameplay-v1.png",
+      "width": 852,
+      "height": 1846,
+      "bytes": 1966323,
+      "sha256": "721351fae970a7fdbd4ff27bcfef277ae872e73e7b5d9634cecaffbffcfe3c94"
+    }
+  ]
+}
