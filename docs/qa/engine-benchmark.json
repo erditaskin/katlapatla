@@ -1,0 +1,8 @@
+{
+  "environment": "desktop Node; not device FPS",
+  "moves": 1000,
+  "waves": 1279,
+  "p50_ms": 0.28087499999998045,
+  "p95_ms": 0.4049580000000219,
+  "max_ms": 1.6199169999999867
+}

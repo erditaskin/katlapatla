@@ -1,0 +1,75 @@
+import { COLORS, type Goal } from "./engine";
+export type Level = {
+  id: number;
+  moves: number;
+  goals: Goal[];
+  region: string;
+};
+// Explicit tuning values: first ten are introductory, later groups increase collection pressure.
+const tuning: [number, number, number][] = [
+  [24, 12, 12],
+  [25, 14, 14],
+  [25, 16, 14],
+  [24, 16, 16],
+  [26, 18, 18],
+  [25, 20, 18],
+  [24, 12, 15],
+  [26, 22, 20],
+  [25, 22, 22],
+  [28, 24, 24],
+  [26, 24, 22],
+  [27, 26, 24],
+  [26, 26, 26],
+  [28, 28, 26],
+  [27, 28, 28],
+  [28, 30, 28],
+  [27, 30, 30],
+  [29, 32, 30],
+  [28, 32, 32],
+  [30, 34, 32],
+  [29, 32, 34],
+  [30, 34, 34],
+  [29, 36, 34],
+  [31, 36, 36],
+  [30, 38, 36],
+  [31, 38, 38],
+  [30, 40, 38],
+  [32, 40, 40],
+  [31, 42, 40],
+  [33, 42, 42],
+  [32, 40, 44],
+  [33, 42, 44],
+  [32, 44, 44],
+  [34, 44, 46],
+  [33, 46, 46],
+  [34, 46, 48],
+  [33, 48, 48],
+  [35, 48, 50],
+  [34, 50, 50],
+  [36, 50, 52],
+  [35, 48, 52],
+  [36, 50, 52],
+  [35, 52, 52],
+  [37, 52, 54],
+  [36, 54, 54],
+  [37, 54, 56],
+  [36, 56, 56],
+  [38, 56, 58],
+  [37, 58, 58],
+  [40, 60, 60],
+];
+export const levels: Level[] = tuning.map(([moves, a, b], i) => ({
+  id: i + 1,
+  moves,
+  goals: [
+    { color: COLORS[i % 6]!, count: a },
+    { color: COLORS[(i + 2) % 6]!, count: b },
+  ],
+  region: [
+    "Nil Kapısı",
+    "Lotus Tapınağı",
+    "Güneş Avlusu",
+    "Lapis Geçidi",
+    "Firavun Hazinesi",
+  ][Math.floor(i / 10)]!,
+}));

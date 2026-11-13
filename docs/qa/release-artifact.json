@@ -1,0 +1,12 @@
+{
+  "nativeConfiguration": "Release",
+  "js": "Hermes bytecode via Expo export:embed",
+  "bundleIdentifier": "com.erditaskin.katlapatla.balloons",
+  "mainBundleSha256": "e7ec4d05da4282772b0db0427080257aa169b003365249738828046fcd87e7af",
+  "simulators": [
+    "iPhone 17 Pro / iOS 26.3.1",
+    "KatlaPatla-Compact-QA / iOS 26.3.1"
+  ],
+  "physicalDeviceTested": false,
+  "statusBarHidden": true
+}

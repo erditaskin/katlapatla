@@ -1,0 +1,44 @@
+{
+  "gold": 1250,
+  "lives": 5,
+  "unlocked": 1,
+  "helpers": {
+    "needle": 2,
+    "shuffle": 2,
+    "heart": 1
+  },
+  "game": {
+    "id": "1794610715550-1",
+    "phase": "playing",
+    "moves": 22,
+    "score": 2040,
+    "goals": [
+      {
+        "color": "sun",
+        "count": 11
+      },
+      {
+        "color": "feather",
+        "count": 9
+      }
+    ],
+    "boardHash": "ce2f64573360909d94219d48a926079ae8307c602286323dcba676e577c0c216"
+  },
+  "best": {
+    "pair": [
+      11,
+      12
+    ],
+    "remaining": [
+      {
+        "color": "sun",
+        "count": 11
+      },
+      {
+        "color": "feather",
+        "count": 6
+      }
+    ],
+    "moves": 21
+  }
+}

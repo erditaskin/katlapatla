@@ -32,3 +32,8 @@ Ana referans tuvali 390×844 mantıksal iOS noktasıdır. Sistem güvenli alanı
 ## Ses ve hareket yönü
 
 Kısa, tok, ıslak normal patlama; daha geniş su jeti; büyük su boşalması. Zincirlerde perde ve ritim kademeli artar; aynı anda çalan ses sayısı ve toplam ses seviyesi sınırlanır. Azaltılmış hareket, ses, müzik ve titreşim ayrı kontrol edilir. Bunlar şu anda ses tasarım notudur; ses dosyaları henüz üretilmemiştir.
+
+
+## 14 Kasım uygulama durumu
+
+Kullanıcı balon v2 ve popup tasarımlarını onayladı; uygulama ve simülatör testlerini yetkilendirdi. Güncel kurallar, gerçek fontlar, yerleşim ve yayın sınırları docs/IMPLEMENTATION.md içindedir. Önceki taslak notlar tarihsel karar sürecidir. Uygulanan başlangıç ekonomi değerleri kullanıcı testine açıktır.

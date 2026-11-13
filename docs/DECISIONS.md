@@ -57,3 +57,8 @@ Bu tasarım aşamasında uygulama kodu, gerçek para işlemi veya reklam SDK’s
 ## Kartela onayı
 
 Kullanıcı `03-egypt-premium-palette-v1.png` çizgisinde ana ekranın hazırlanmasını onayladı. Bu onay sanat yönü içindir; ekran düzeni, kesin font/ölçüler ve uygulamaya başlama ayrı aşamalardır.
+
+
+## 14 Kasım uygulama durumu
+
+Kullanıcı balon v2 ve popup tasarımlarını onayladı; uygulama ve simülatör testlerini yetkilendirdi. Güncel kurallar, gerçek fontlar, yerleşim ve yayın sınırları docs/IMPLEMENTATION.md içindedir. Önceki taslak notlar tarihsel karar sürecidir. Uygulanan başlangıç ekonomi değerleri kullanıcı testine açıktır.

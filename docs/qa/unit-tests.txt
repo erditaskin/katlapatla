@@ -1,0 +1,98 @@
+
+> katlapatla@1.0.0 test
+> node --import tsx --test tests/*.test.ts
+
+TAP version 13
+# Subtest: 50 levels have settled playable boards, unique IDs and repeatable seeds
+ok 1 - 50 levels have settled playable boards, unique IDs and repeatable seeds
+  ---
+  duration_ms: 213.861375
+  type: 'test'
+  ...
+# Subtest: invalid swap preserves board, seed, score and moves; no row wrapping
+ok 2 - invalid swap preserves board, seed, score and moves; no row wrapping
+  ---
+  duration_ms: 0.76625
+  type: 'test'
+  ...
+# Subtest: successful swap consumes one move regardless of cascade; source immutable
+ok 3 - successful swap consumes one move regardless of cascade; source immutable
+  ---
+  duration_ms: 1.198666
+  type: 'test'
+  ...
+# Subtest: 4 creates heart, 5 creates gift, intersection creates pressure
+ok 4 - 4 creates heart, 5 creates gift, intersection creates pressure
+  ---
+  duration_ms: 4.357333
+  type: 'test'
+  ...
+# Subtest: gift with neighbor clears chosen color and propagates special effects
+ok 5 - gift with neighbor clears chosen color and propagates special effects
+  ---
+  duration_ms: 0.971084
+  type: 'test'
+  ...
+# Subtest: two gifts clear 64 cells; needle never costs a move
+ok 6 - two gifts clear 64 cells; needle never costs a move
+  ---
+  duration_ms: 1.475792
+  type: 'test'
+  ...
+# Subtest: shuffle preserves tile identities and powers without awarding score
+ok 7 - shuffle preserves tile identities and powers without awarding score
+  ---
+  duration_ms: 1.120167
+  type: 'test'
+  ...
+# Subtest: 100 seeded rounds maintain settled board and nonnegative goals
+ok 8 - 100 seeded rounds maintain settled board and nonnegative goals
+  ---
+  duration_ms: 896.021917
+  type: 'test'
+  ...
+# Subtest: five lives, 30 minute regeneration, cap and backward time
+ok 9 - five lives, 30 minute regeneration, cap and backward time
+  ---
+  duration_ms: 0.548375
+  type: 'test'
+  ...
+# Subtest: win rewards once, loss charges once, abandoned settled game cannot double charge
+ok 10 - win rewards once, loss charges once, abandoned settled game cannot double charge
+  ---
+  duration_ms: 3.933834
+  type: 'test'
+  ...
+# Subtest: background save roundtrip keeps board and moves; corruption is rejected
+ok 11 - background save roundtrip keeps board and moves; corruption is rejected
+  ---
+  duration_ms: 1.4675
+  type: 'test'
+  ...
+# Subtest: active run cannot be replaced, zero lives block start and locked levels stay locked
+ok 12 - active run cannot be replaced, zero lives block start and locked levels stay locked
+  ---
+  duration_ms: 0.764833
+  type: 'test'
+  ...
+# Subtest: continue offer once only, insufficient funds never go negative
+ok 13 - continue offer once only, insufficient funds never go negative
+  ---
+  duration_ms: 0.544417
+  type: 'test'
+  ...
+# Subtest: store never charges full lives or insufficient funds; helper purchase atomic
+ok 14 - store never charges full lives or insufficient funds; helper purchase atomic
+  ---
+  duration_ms: 0.119959
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1244.46925

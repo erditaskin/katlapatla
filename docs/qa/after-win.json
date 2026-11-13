@@ -1,0 +1,12 @@
+{
+  "gold": 1350,
+  "lives": 5,
+  "unlocked": 2,
+  "helpers": {
+    "needle": 2,
+    "shuffle": 2,
+    "heart": 1
+  },
+  "game": null,
+  "best": null
+}

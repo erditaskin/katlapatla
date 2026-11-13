@@ -1,0 +1,456 @@
+{
+  "method": "One seeded greedy simulation per level; not human balance validation",
+  "won": 44,
+  "results": [
+    {
+      "level": 1,
+      "status": "won",
+      "moves": 5,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 2,
+      "status": "won",
+      "moves": 12,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 3,
+      "status": "won",
+      "moves": 8,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 4,
+      "status": "won",
+      "moves": 12,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 5,
+      "status": "won",
+      "moves": 16,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 6,
+      "status": "won",
+      "moves": 13,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 7,
+      "status": "won",
+      "moves": 6,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 8,
+      "status": "won",
+      "moves": 7,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 9,
+      "status": "won",
+      "moves": 8,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 10,
+      "status": "won",
+      "moves": 28,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 11,
+      "status": "won",
+      "moves": 12,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 12,
+      "status": "won",
+      "moves": 27,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 13,
+      "status": "won",
+      "moves": 24,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 14,
+      "status": "won",
+      "moves": 15,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 15,
+      "status": "won",
+      "moves": 17,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 16,
+      "status": "won",
+      "moves": 19,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 17,
+      "status": "won",
+      "moves": 19,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 18,
+      "status": "won",
+      "moves": 20,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 19,
+      "status": "won",
+      "moves": 14,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 20,
+      "status": "won",
+      "moves": 17,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 21,
+      "status": "won",
+      "moves": 17,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 22,
+      "status": "won",
+      "moves": 23,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 23,
+      "status": "won",
+      "moves": 17,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 24,
+      "status": "won",
+      "moves": 23,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 25,
+      "status": "won",
+      "moves": 27,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 26,
+      "status": "won",
+      "moves": 25,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 27,
+      "status": "won",
+      "moves": 17,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 28,
+      "status": "won",
+      "moves": 21,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 29,
+      "status": "offer",
+      "moves": 31,
+      "remaining": [
+        1,
+        0
+      ]
+    },
+    {
+      "level": 30,
+      "status": "won",
+      "moves": 19,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 31,
+      "status": "won",
+      "moves": 21,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 32,
+      "status": "won",
+      "moves": 33,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 33,
+      "status": "won",
+      "moves": 19,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 34,
+      "status": "won",
+      "moves": 22,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 35,
+      "status": "offer",
+      "moves": 33,
+      "remaining": [
+        0,
+        1
+      ]
+    },
+    {
+      "level": 36,
+      "status": "won",
+      "moves": 22,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 37,
+      "status": "won",
+      "moves": 31,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 38,
+      "status": "offer",
+      "moves": 35,
+      "remaining": [
+        1,
+        0
+      ]
+    },
+    {
+      "level": 39,
+      "status": "offer",
+      "moves": 34,
+      "remaining": [
+        0,
+        4
+      ]
+    },
+    {
+      "level": 40,
+      "status": "won",
+      "moves": 24,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 41,
+      "status": "won",
+      "moves": 29,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 42,
+      "status": "offer",
+      "moves": 36,
+      "remaining": [
+        0,
+        7
+      ]
+    },
+    {
+      "level": 43,
+      "status": "won",
+      "moves": 34,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 44,
+      "status": "won",
+      "moves": 35,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 45,
+      "status": "won",
+      "moves": 33,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 46,
+      "status": "won",
+      "moves": 36,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 47,
+      "status": "won",
+      "moves": 33,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 48,
+      "status": "won",
+      "moves": 36,
+      "remaining": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": 49,
+      "status": "offer",
+      "moves": 37,
+      "remaining": [
+        2,
+        4
+      ]
+    },
+    {
+      "level": 50,
+      "status": "won",
+      "moves": 38,
+      "remaining": [
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "image": "iphone-17pro-gameplay.png",
+  "size": [
+    1206,
+    2622
+  ],
+  "fullyBlackRows": 0,
+  "inspection": "Background painted to top and bottom; system clock/status icons hidden; interactive controls preserve hardware safe areas."
+}

@@ -75,3 +75,23 @@ Production UI parts atlas on genuine transparent background, adult premium ancie
 ## Normal balloons v2 — reference extraction retry
 
 Edit the attached reference image. Extract ONLY the six large normal balloons from the top row, preserving their exact existing appearance as closely as possible: amber sun, lapis ankh, teal feather, garnet lotus, copper waves, ivory pillar. Preserve their bottom-heavy rounded bulging lower bodies, narrower upper shoulders, visible water meniscus, highlights, gold symbols, colors and single tied bottom knots. Do not redesign into symmetrical oval eggs. Remove the entire temple, lettering, checkerboard, small balloons, heart, gift and effects. Place the six extracted balloons in a spacious 3-column 2-row layout on genuine transparent background, isolated with generous padding, complete knots and no overlap. No text, no external glow, no floor shadows. Match the reference silhouettes and water-filled material, not the previous generated sprite versions.
+
+
+## Runtime — Environment background
+
+Generate a portrait 9:19.5 mobile game BACKGROUND ONLY matching attached Katla Patla approved ancient Egyptian premium art. Same worn dark basalt and sandstone temple columns narrowly framing left and right edges, fine aged gold bands near top, soft torch glow at bottom corners, floor tiles in bottom 12 percent. Central 85 percent must remain calm flat dark stone, subtle low contrast texture, usable beneath interactive native UI. No balloons, words, letters, logo, numbers, status bar, icons, board, button or panel frames. Fill every edge. Adult restrained premium, no cartoons. This is a textless reusable environment layer, not a full UI screenshot.
+
+
+## Runtime — Nile map background
+
+A portrait mobile game environment background only, premium realistic stylized ancient Egyptian Nile temple valley at golden sunset, matching attached approved map screen LEFT panel. Meandering water channel and stone stairs traversing lower left up toward upper right, sandstone temple columns at edges, pyramids distance, dark basalt foreground with gold torch light, teal water. Leave center traversable path open for interactive numbered level nodes added later. No text, numbers, letters, labels, logo, statusbar, buttons, frames, stars or level markers. High quality adult premium game illustration. Fill entire portrait canvas.
+
+
+## Runtime — Gold wordmark
+
+Extract the gold KATLA PATLA wordmark from attached approved mobile gameplay screen. Output ONLY the exact uppercase text 'KATLA PATLA' with its two small horizontal wing-like gold ornaments, on genuine transparent background. Preserve antique angular carved Roman Egyptian gold serif lettering, bevel highlights, dark bronze edge shadow within letters, original letter proportions, spacing and warm worn gold. Wide horizontal composition, very generous transparent margins, no temple/background, no columns, panels, balloons, status bar, extra text or symbols. This is a logo extraction asset for the same app, not a redesign.
+
+
+## iOS app icon
+
+Create the iOS app icon for this exact premium ancient Egyptian water balloon game. Square edge-to-edge dark worn basalt background with restrained aged-gold clipped-corner inset frame. One large bottom-heavy amber water balloon, bulging lower body, narrower upper shoulder, visible water meniscus, embossed gold sun disk and single tied bottom knot. Match the attached approved balloon palette, do not turn into a gem or metal sphere. Strong legible silhouette at 60 pixels. No text, letters, numbers, logo, people, face, external padding or rounded outer corners; iOS masks the square. Centered composition, realistic stylized adult premium material.

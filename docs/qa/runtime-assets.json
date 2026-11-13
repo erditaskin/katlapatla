@@ -1,0 +1,466 @@
+[
+  {
+    "file": "assets/art/ankh.png",
+    "size": [
+      372,
+      464
+    ],
+    "sha256": "ae38c84d719817f4a68a77ad6f69d0ddc2a72e82ea5ce939d8c615a0f8517942"
+  },
+  {
+    "file": "assets/art/back.png",
+    "size": [
+      228,
+      201
+    ],
+    "sha256": "105bb4f45b5ca9ed3ba3b5e106d761ea6032c4079b4dc9341b6833933ebdd3cc"
+  },
+  {
+    "file": "assets/art/button-disabled.png",
+    "size": [
+      222,
+      57
+    ],
+    "sha256": "121284ee1425b5d22c59e106fa79ebdf42161dd700b6786e53f59156da8e6460"
+  },
+  {
+    "file": "assets/art/button-disabled@2x.png",
+    "size": [
+      444,
+      114
+    ],
+    "sha256": "fbd1a85ccd983cd38af8303c572097cb88ed9217a6e643526c3f68f56780f34b"
+  },
+  {
+    "file": "assets/art/button-disabled@3x.png",
+    "size": [
+      666,
+      171
+    ],
+    "sha256": "c915ea09ec96d9eb2949c310794bcf9483d23a4cc797cfe606d194fba804ad7d"
+  },
+  {
+    "file": "assets/art/button-garnet.png",
+    "size": [
+      222,
+      58
+    ],
+    "sha256": "6f870be3f91f9673c69afdc04ec759db78cbde8bcfb956fbc46e6e5c654346f2"
+  },
+  {
+    "file": "assets/art/button-garnet@2x.png",
+    "size": [
+      444,
+      116
+    ],
+    "sha256": "4485f4ce56c9e3687e2f26203de7f0b99572abc9cb6903215b0bf9053a6963c4"
+  },
+  {
+    "file": "assets/art/button-garnet@3x.png",
+    "size": [
+      666,
+      174
+    ],
+    "sha256": "c6a113c640158d64d4b85a73007f0b9d5928e7f8cf8707126d4fde2073cd1355"
+  },
+  {
+    "file": "assets/art/button-teal-pressed.png",
+    "size": [
+      222,
+      57
+    ],
+    "sha256": "c4ac81cf83d94a9ed9be522a5f6c23ca2faf0e78b2eb08c70a666b38ab474652"
+  },
+  {
+    "file": "assets/art/button-teal-pressed@2x.png",
+    "size": [
+      444,
+      114
+    ],
+    "sha256": "20edd7ce616d56563aaa39c708c7d3a7f5c72f4a0e9dcff43ee4b80b8d360c5e"
+  },
+  {
+    "file": "assets/art/button-teal-pressed@3x.png",
+    "size": [
+      666,
+      171
+    ],
+    "sha256": "89b64721703ba2e8bd2c9a57828b3139b38e585ebec7ec90fc1753e1c8402acc"
+  },
+  {
+    "file": "assets/art/button-teal.png",
+    "size": [
+      222,
+      58
+    ],
+    "sha256": "37dfe7fa25ab25bd5b575fc819215b4926a05370000478d7f74f95b558aa60b8"
+  },
+  {
+    "file": "assets/art/button-teal@2x.png",
+    "size": [
+      444,
+      116
+    ],
+    "sha256": "eb901f48f801f8038f560d1f169d3615eb7dd7f69539943f9008258d896389df"
+  },
+  {
+    "file": "assets/art/button-teal@3x.png",
+    "size": [
+      666,
+      174
+    ],
+    "sha256": "50a05d070932758a269499ae9387e5a944ec1465217a223be6276262d1cfdd65"
+  },
+  {
+    "file": "assets/art/clock.png",
+    "size": [
+      235,
+      242
+    ],
+    "sha256": "55a377eeba5457a0bb93ba5862c76323778af4d1ac653d3ba7ceaf6c03b6cf42"
+  },
+  {
+    "file": "assets/art/close.png",
+    "size": [
+      217,
+      221
+    ],
+    "sha256": "878182fbd458dca2af73cbc708b294d90e841f7f0f3ac8f9cd9d30be603d7293"
+  },
+  {
+    "file": "assets/art/coin.png",
+    "size": [
+      234,
+      243
+    ],
+    "sha256": "427de867babedb68723845c913b3801eb3a221e7e638c70bd45374bb8a5af693"
+  },
+  {
+    "file": "assets/art/count-badge.png",
+    "size": [
+      300,
+      121
+    ],
+    "sha256": "bdea14d075bab37661a9d8ce86b3fd9aed70927b507ee47303d3697597119b64"
+  },
+  {
+    "file": "assets/art/feather.png",
+    "size": [
+      368,
+      463
+    ],
+    "sha256": "baf0b1e43033d509b0ee8771c0ca510b716dc029c4a364cefb2632b426c960f0"
+  },
+  {
+    "file": "assets/art/gift.png",
+    "size": [
+      320,
+      370
+    ],
+    "sha256": "26cbe5142d3f4f3a9390418067b11b7aaabbc39df255d234358736613e6391d0"
+  },
+  {
+    "file": "assets/art/heart-horizontal.png",
+    "size": [
+      339,
+      337
+    ],
+    "sha256": "29febd033966c75477fea2e75e60d9df2d0799aac9b26c018330546aab64fd34"
+  },
+  {
+    "file": "assets/art/heart-vertical.png",
+    "size": [
+      356,
+      344
+    ],
+    "sha256": "4b975ea4f2ed927f91bbdd89f461b3162044023297a905b3a8c6e38f1ce63ac1"
+  },
+  {
+    "file": "assets/art/icon-frame.png",
+    "size": [
+      365,
+      361
+    ],
+    "sha256": "ee83702495a1f0b1fcc91f1b404c18af2443849e182bbff3397a3c5b822ac73d"
+  },
+  {
+    "file": "assets/art/level-node.png",
+    "size": [
+      389,
+      204
+    ],
+    "sha256": "2fa4ed35bf745800a2e4feea91501463955e466cf61e2bb42f27e7bee92c0be3"
+  },
+  {
+    "file": "assets/art/lock.png",
+    "size": [
+      208,
+      243
+    ],
+    "sha256": "2c166ff368b5d67bb9a07d1967c202012d2895b2e3561621fe0ec61d7772e774"
+  },
+  {
+    "file": "assets/art/logo.png",
+    "size": [
+      1912,
+      241
+    ],
+    "sha256": "0e9b6b5effd70085dc3f552402b1719dec97f6c08e04551e1792ddf8067f78d1"
+  },
+  {
+    "file": "assets/art/lotus.png",
+    "size": [
+      373,
+      469
+    ],
+    "sha256": "294d25f903fccef8ed1b3e13139a5adc1c9e04b975fa6aa47a72deb25a18060a"
+  },
+  {
+    "file": "assets/art/map.png",
+    "size": [
+      277,
+      235
+    ],
+    "sha256": "2c6a3d0f1bed233bfeb3968603487941efd6bad5cc5cb7af92d2cfd66df5b70a"
+  },
+  {
+    "file": "assets/art/needle.png",
+    "size": [
+      315,
+      320
+    ],
+    "sha256": "73203216fc35ec6f2273364b25b2a8d3715338de82454c477f29fded7968ef13"
+  },
+  {
+    "file": "assets/art/nile.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "sha256": "b7d60db057ea058271a34a37cab81ea33c2b601851051ea52230cc5599b02930"
+  },
+  {
+    "file": "assets/art/panel.png",
+    "size": [
+      301,
+      134
+    ],
+    "sha256": "924e58476ad169b37201fc4a3a736aadb9980dfd5621b8133e26b36555d692bb"
+  },
+  {
+    "file": "assets/art/panel@2x.png",
+    "size": [
+      602,
+      268
+    ],
+    "sha256": "f4241fc05da183e72accd802c11ace986bf168925e869a649a7d71515de677b1"
+  },
+  {
+    "file": "assets/art/panel@3x.png",
+    "size": [
+      903,
+      402
+    ],
+    "sha256": "6be63774f6c151026c736df188860930e5b8c90b9fac9ca270d6dc999644cd69"
+  },
+  {
+    "file": "assets/art/pillar.png",
+    "size": [
+      378,
+      469
+    ],
+    "sha256": "581d7138b22b7bd16234a453c18c3056f424e91251aa06f8691b24a824238287"
+  },
+  {
+    "file": "assets/art/play.png",
+    "size": [
+      188,
+      220
+    ],
+    "sha256": "9cd6aabb8c9bf18e7425026ccee5ad00e98d204a36c9a189c82bde6e376ec14e"
+  },
+  {
+    "file": "assets/art/plus.png",
+    "size": [
+      223,
+      227
+    ],
+    "sha256": "4e3faad63bf8acce21f29b75d079a34dd82deb7221c049ff7fe871376cee2876"
+  },
+  {
+    "file": "assets/art/popup-frame.png",
+    "size": [
+      392,
+      443
+    ],
+    "sha256": "a4b7e718b9dd56fc6b7c4e6c4b8ac0ae0b80a8a6947fa81107e251ef184b8ed0"
+  },
+  {
+    "file": "assets/art/pressure.png",
+    "size": [
+      313,
+      356
+    ],
+    "sha256": "a5baeb7bcdcfbdb004b30937511f9fe151860d0a93501619bba823930897f910"
+  },
+  {
+    "file": "assets/art/progress-fill.png",
+    "size": [
+      438,
+      76
+    ],
+    "sha256": "ce7182bd80c193d6aed3ccd8949bea5540290f2f84a10fb7d06255f74e111204"
+  },
+  {
+    "file": "assets/art/progress-trough.png",
+    "size": [
+      422,
+      56
+    ],
+    "sha256": "9858dd7744a3b6470e774ac50cedf2fe222a9bae77bbeaa95b8a2671e66d730b"
+  },
+  {
+    "file": "assets/art/resource-counter.png",
+    "size": [
+      464,
+      154
+    ],
+    "sha256": "2608518e06acc57f4c697b6b7f353d55528778ad3a264d4f3d2acc5b93c83eac"
+  },
+  {
+    "file": "assets/art/selection.png",
+    "size": [
+      230,
+      218
+    ],
+    "sha256": "cb4dd8df9334b867dff06fd4f74fdc7b76cb2048c068a4e13b6aac7d64480a19"
+  },
+  {
+    "file": "assets/art/settings.png",
+    "size": [
+      246,
+      244
+    ],
+    "sha256": "3b6452e8eba406b3f458182a60fa07642347a52348a673f9c4af457efeafc0fa"
+  },
+  {
+    "file": "assets/art/shop.png",
+    "size": [
+      266,
+      216
+    ],
+    "sha256": "4ffeb45ac3d92aadba9537ff53f1758b6bf640fdec0cd60d9d2b29828ce59369"
+  },
+  {
+    "file": "assets/art/shuffle.png",
+    "size": [
+      369,
+      322
+    ],
+    "sha256": "d7539fef4b95d4789e91a59a799f06dc2cf8daee0cb422fe60bb8b7ac049bbab"
+  },
+  {
+    "file": "assets/art/splash-copper.png",
+    "size": [
+      400,
+      239
+    ],
+    "sha256": "db5f4165b6ae51e8525e6cd4f44bc5524d9725920840ea626dfe477ea91b9e9f"
+  },
+  {
+    "file": "assets/art/splash-garnet.png",
+    "size": [
+      407,
+      322
+    ],
+    "sha256": "55aff58b1237f14b8a65e45a2eea91d5ca60d22517e51f65d819d345a97778cb"
+  },
+  {
+    "file": "assets/art/splash-gold.png",
+    "size": [
+      397,
+      236
+    ],
+    "sha256": "56f5e35db961aaa19ea8bfb3c4a3538c2aa5b402f6d027ba72606c00e0f5eedd"
+  },
+  {
+    "file": "assets/art/splash-lapis.png",
+    "size": [
+      412,
+      316
+    ],
+    "sha256": "d29f3c134615058a5a246487391cf64637c734bad793d2e1c829f4fdccd6313e"
+  },
+  {
+    "file": "assets/art/splash-silver.png",
+    "size": [
+      407,
+      323
+    ],
+    "sha256": "b57204a10ea127ebc6df3191ad5b7a8aceb5dce7dc034fc80686bfc58c29afff"
+  },
+  {
+    "file": "assets/art/splash-teal.png",
+    "size": [
+      466,
+      184
+    ],
+    "sha256": "b54922b6838fb4f21e35acb609a2b51f62ec26225114a4db13294dfc4f2193c7"
+  },
+  {
+    "file": "assets/art/star.png",
+    "size": [
+      258,
+      250
+    ],
+    "sha256": "42497008b256fca545908f5643155b538c7dcf7f81c6538929c7f575c93f96a3"
+  },
+  {
+    "file": "assets/art/sun.png",
+    "size": [
+      363,
+      463
+    ],
+    "sha256": "4d62b3879daeeeb336ab3e400f35475de91a6423f43a2cdbec8077306451f6fc"
+  },
+  {
+    "file": "assets/art/temple.png",
+    "size": [
+      852,
+      1846
+    ],
+    "sha256": "9f68cc84c2eb0466d315a1d4767cbaf5e3f9217f154253552562b82658fa07fa"
+  },
+  {
+    "file": "assets/art/toggle-off.png",
+    "size": [
+      407,
+      159
+    ],
+    "sha256": "97fd529d96f1ba1d0178b8e6a8d5757723cbd1672ff98ccd999c78deb3286ac9"
+  },
+  {
+    "file": "assets/art/toggle-on.png",
+    "size": [
+      427,
+      155
+    ],
+    "sha256": "39a239d462b22c9076c6b3a91d7475f02994f265790e4193f5b77021565a524c"
+  },
+  {
+    "file": "assets/art/video.png",
+    "size": [
+      252,
+      192
+    ],
+    "sha256": "b73e866b4ff16500a7c6fecd9c1967fa4606916c9533ffc1ebc0fadce8cbcac3"
+  },
+  {
+    "file": "assets/art/waves.png",
+    "size": [
+      377,
+      469
+    ],
+    "sha256": "f964a89ab581dbb0bedf44855ea69055356d408b98c5c3a6ecbbe27ecc28645e"
+  }
+]

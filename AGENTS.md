@@ -4,7 +4,7 @@ This is a new water-balloon match-3 game, separate from Ultimatum. Work on `main
 
 ## Current phase
 
-The project is in product and visual design. Read `docs/DECISIONS.md` and `docs/VISUAL_SPEC.md` first. Distinguish confirmed user decisions from proposed mechanics and design candidates. Do not start application implementation before the user authorizes it. Later explicit user authorization takes precedence over this phase note.
+The user authorized implementation and iOS simulator testing on 2026-11-14. Read `docs/DECISIONS.md` and `docs/VISUAL_SPEC.md` first. Distinguish confirmed user decisions from proposed mechanics and design candidates. Do not start application implementation before the user authorizes it. Later explicit user authorization takes precedence over this phase note.
 
 ## Visual production
 
