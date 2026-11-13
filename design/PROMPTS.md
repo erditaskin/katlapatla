@@ -40,3 +40,28 @@ Create a companion landscape sheet of SIX adult premium ancient Egyptian mobile 
 ## 08-balloon-master-candidate-v1.png
 
 Produce a production master sprite sheet with SIX isolated water balloons in a single horizontal row, all full bodies and bottom knots visible, equal scale and generous transparent padding, true transparent background. Match the attached approved Katla Patla gameplay exactly: 1 amber gold sun disk, 2 deep lapis blue gold ankh, 3 teal gold feather, 4 garnet red gold lotus, 5 copper orange gold three water waves, 6 ivory silver dark geometric pillar. Thin glossy flexible metallized latex, translucent colored water interior, asymmetric highlights and visible liquid line, no faces, no top knots, no floor, no external shadows, no labels, no text, no frames, no UI. Adult premium ancient Egyptian aesthetic. Each balloon same upright oval silhouette as reference, not gemstone or potion bottle. Keep each item completely separated for rectangular cropping. These are runtime art candidates matching approved visual design.
+
+
+## Production v1 — normal
+
+Use case: stylized-concept. Production PNG sprite atlas, genuine transparent background. Attached image is STRICT style reference: adult ancient Egyptian premium worn gold metal accents, glossy thin flexible translucent liquid balloons, bottom knot only, no face. No labels, text, numbers, grid, floor or background. Exact 3 columns by 2 rows equally sized cells, each object centered in its cell and occupies at most 65% cell width and height; ample fully transparent gutters, all tips complete. Six normal balloons ONLY: top row amber gold SUN, lapis blue gold ANKH, teal gold FEATHER; bottom row garnet gold LOTUS, copper orange gold THREE WAVES, ivory silver dark PILLAR. Preserve approved oval proportions, colored water meniscus, single asymmetric light reflection and embossed simple symbols. Not gemstones, glass bottles or hard armor.
+
+
+## Production v1 — special
+
+Use case: stylized-concept. Production PNG sprite atlas, genuine transparent background. Attached image is STRICT style reference: adult ancient Egyptian premium worn gold metal accents, glossy thin flexible translucent liquid balloons, bottom knot only, no face. No labels, text, numbers, grid, floor or background. Exact 3 columns by 2 rows equally sized cells, each object centered in its cell and occupies at most 65% cell width and height; ample fully transparent gutters, all tips complete. Six special objects: top row garnet heart water balloon with horizontal teal water band edged gold, lapis heart water balloon with vertical teal water band edged gold, lapis rounded gift water balloon with gold ribbon bow and bottom knot. Bottom row round teal pressure water balloon with three gold concentric pressure rings and bottom knot, golden needle helper diagonal, teal liquid pair of circular shuffle arrows. Match heart/gift/needle/arrows in approved screenshot exactly.
+
+
+## Production v1 — controls
+
+Use case: stylized-concept. Production UI asset atlas on genuine transparent background. Strictly match attached dark basalt ancient Egypt premium popup buttons: angular clipped corners, thin layered worn GOLD metal borders, teal watery enamel with small bubbles. NO TEXT OR SYMBOLS. 2 columns by 3 rows, generous 15% transparent gutter in every cell. Top left normal wide teal button, top right same wide teal button PRESSED darker recessed. Middle left wide garnet secondary button, middle right wide dark basalt button disabled with muted gold rim. Bottom left square clipped-corner dark basalt gold icon-button frame, bottom right tall dark basalt popup panel with gold clipped-corner border and empty interior. Every shape complete, isolated, no shadow outside object, no extra motifs.
+
+
+## Production v1 — icons
+
+Use case: stylized-concept. Production UI icon atlas transparent background. Match attached antique Egyptian game worn gold icon art exactly. 4 columns by 3 rows twelve equally sized cells, each isolated symbol occupies max60% cell with generous transparent gutters. Reading order: gold back arrow, gold gear, gold plus, gold X; gold pyramid coin, five-point gold achievement star, gold padlock, gold play triangle; gold filmstrip with play triangle for optional video, gold clock, gold map with pin, gold shop awning. No text, labels, frames, external shadow, numbers or background. Crisp silhouettes and restrained engraved gold detail, adult premium.
+
+
+## Production v1 — fx
+
+Use case: stylized-concept. Transparent production sprite atlas of SIX isolated water splash bursts, 3 columns by 2 rows with huge transparent gutters. Match attached premium ancient Egyptian water balloon art. Top row amber gold water crown, lapis blue radial burst, teal horizontal water jet. Bottom row garnet radial water burst, copper water crown, silver ivory water burst. Colored water sheets and rounded droplets, fluid not shards, no metal fragments, no flame, no glowing fog, no surrounding backdrop. Each splash contained within inner65% of its own cell, no overlap. Real transparent alpha. No text. Static peak effect sprites, not an animation sequence.

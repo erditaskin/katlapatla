@@ -35,3 +35,8 @@ Kullanıcı ana ekran düzenini onayladı. 05 numaralı kartela harita, mağaza 
 ## Yeni kullanıcı onayı ve kalan tasarımlar
 
 Harita, mağaza ve başarılı sonuç ekranları onaylandı. 06 ve 07 yeni inceleme adaylarıdır. 12 kayıpsız referans kesimi üretildi. 08 balon masterı boşluk nedeniyle üretime hazır değildir. Öğretici karteladaki üç hazır eşleşme gerçek başlangıç tahtası olarak kullanılmamalıdır; etkileşimli öğreticide yalnızca doğru komşu değişimiyle eşleşme oluşmalıdır. Ayrıntılı üretim sınırları HANDOFF.md içindedir.
+
+
+## 14 Kasım — şeffaf varlık incelemesi
+
+Popup kartelaları onaylandı. production-v1 altında 36 RGBA parça ve 108 hedef boyut önizlemesi kaydedildi. 390 px kartela incelendi. Basınç dalga işareti ve yıldızın ek ışınları referanstan ayrılıyor; henüz nihai varlık kabulü yoktur. Diğer eksikler production-v1/README.md içinde açıkça kaydedildi.

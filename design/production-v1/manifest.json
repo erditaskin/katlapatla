@@ -1,0 +1,1085 @@
+{
+  "status": "visual-review-candidates",
+  "assets": [
+    {
+      "name": "sun",
+      "group": "normal",
+      "master": "masters/normal.png",
+      "sourceRect": [
+        134,
+        59,
+        437,
+        466
+      ],
+      "file": "sprites/sun.png",
+      "size": [
+        303,
+        407
+      ],
+      "targetBox": [
+        48,
+        48
+      ],
+      "exports": [
+        "sun-preview.png",
+        "sun@2x-preview.png",
+        "sun@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "f2c3dd5bcf6e0501d96105c7396bb0597381978792fa5b9f4c0152d6d9ce068d"
+    },
+    {
+      "name": "ankh",
+      "group": "normal",
+      "master": "masters/normal.png",
+      "sourceRect": [
+        614,
+        58,
+        920,
+        466
+      ],
+      "file": "sprites/ankh.png",
+      "size": [
+        306,
+        408
+      ],
+      "targetBox": [
+        48,
+        48
+      ],
+      "exports": [
+        "ankh-preview.png",
+        "ankh@2x-preview.png",
+        "ankh@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "22cf792220e4097e0f94450b668b9599a8e782b50ee9fb2599a508a2f52bf75d"
+    },
+    {
+      "name": "feather",
+      "group": "normal",
+      "master": "masters/normal.png",
+      "sourceRect": [
+        1095,
+        59,
+        1400,
+        466
+      ],
+      "file": "sprites/feather.png",
+      "size": [
+        305,
+        407
+      ],
+      "targetBox": [
+        48,
+        48
+      ],
+      "exports": [
+        "feather-preview.png",
+        "feather@2x-preview.png",
+        "feather@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "1dab8b5852f6d721638faa28c8f7816aebd39fc46bf26cc0331318493ebeedda"
+    },
+    {
+      "name": "lotus",
+      "group": "normal",
+      "master": "masters/normal.png",
+      "sourceRect": [
+        133,
+        555,
+        443,
+        971
+      ],
+      "file": "sprites/lotus.png",
+      "size": [
+        310,
+        416
+      ],
+      "targetBox": [
+        48,
+        48
+      ],
+      "exports": [
+        "lotus-preview.png",
+        "lotus@2x-preview.png",
+        "lotus@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "91bbaa092876cb07b945a43e91b03b0bfdf9df5627190f71e08f6ae964500433"
+    },
+    {
+      "name": "waves",
+      "group": "normal",
+      "master": "masters/normal.png",
+      "sourceRect": [
+        613,
+        555,
+        924,
+        971
+      ],
+      "file": "sprites/waves.png",
+      "size": [
+        311,
+        416
+      ],
+      "targetBox": [
+        48,
+        48
+      ],
+      "exports": [
+        "waves-preview.png",
+        "waves@2x-preview.png",
+        "waves@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "30c9f72febb0f4c29366e33b08d4ec64573c80690c455288f13cc681993cd251"
+    },
+    {
+      "name": "pillar",
+      "group": "normal",
+      "master": "masters/normal.png",
+      "sourceRect": [
+        1094,
+        556,
+        1404,
+        971
+      ],
+      "file": "sprites/pillar.png",
+      "size": [
+        310,
+        415
+      ],
+      "targetBox": [
+        48,
+        48
+      ],
+      "exports": [
+        "pillar-preview.png",
+        "pillar@2x-preview.png",
+        "pillar@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "f4f63c4eaa2b43938b5bba6f81e67f688e01676a4ddef19cbad5548ae1d81c62"
+    },
+    {
+      "name": "heart-horizontal",
+      "group": "special",
+      "master": "masters/special.png",
+      "sourceRect": [
+        110,
+        103,
+        449,
+        440
+      ],
+      "file": "sprites/heart-horizontal.png",
+      "size": [
+        339,
+        337
+      ],
+      "targetBox": [
+        48,
+        48
+      ],
+      "exports": [
+        "heart-horizontal-preview.png",
+        "heart-horizontal@2x-preview.png",
+        "heart-horizontal@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "29febd033966c75477fea2e75e60d9df2d0799aac9b26c018330546aab64fd34"
+    },
+    {
+      "name": "heart-vertical",
+      "group": "special",
+      "master": "masters/special.png",
+      "sourceRect": [
+        590,
+        97,
+        946,
+        441
+      ],
+      "file": "sprites/heart-vertical.png",
+      "size": [
+        356,
+        344
+      ],
+      "targetBox": [
+        48,
+        48
+      ],
+      "exports": [
+        "heart-vertical-preview.png",
+        "heart-vertical@2x-preview.png",
+        "heart-vertical@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "4b975ea4f2ed927f91bbdd89f461b3162044023297a905b3a8c6e38f1ce63ac1"
+    },
+    {
+      "name": "gift",
+      "group": "special",
+      "master": "masters/special.png",
+      "sourceRect": [
+        1103,
+        72,
+        1423,
+        442
+      ],
+      "file": "sprites/gift.png",
+      "size": [
+        320,
+        370
+      ],
+      "targetBox": [
+        48,
+        48
+      ],
+      "exports": [
+        "gift-preview.png",
+        "gift@2x-preview.png",
+        "gift@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "26cbe5142d3f4f3a9390418067b11b7aaabbc39df255d234358736613e6391d0"
+    },
+    {
+      "name": "pressure",
+      "group": "special",
+      "master": "masters/special.png",
+      "sourceRect": [
+        119,
+        589,
+        432,
+        945
+      ],
+      "file": "sprites/pressure.png",
+      "size": [
+        313,
+        356
+      ],
+      "targetBox": [
+        48,
+        48
+      ],
+      "exports": [
+        "pressure-preview.png",
+        "pressure@2x-preview.png",
+        "pressure@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "a5baeb7bcdcfbdb004b30937511f9fe151860d0a93501619bba823930897f910"
+    },
+    {
+      "name": "needle",
+      "group": "special",
+      "master": "masters/special.png",
+      "sourceRect": [
+        596,
+        599,
+        911,
+        919
+      ],
+      "file": "sprites/needle.png",
+      "size": [
+        315,
+        320
+      ],
+      "targetBox": [
+        48,
+        48
+      ],
+      "exports": [
+        "needle-preview.png",
+        "needle@2x-preview.png",
+        "needle@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "73203216fc35ec6f2273364b25b2a8d3715338de82454c477f29fded7968ef13"
+    },
+    {
+      "name": "shuffle",
+      "group": "special",
+      "master": "masters/special.png",
+      "sourceRect": [
+        1067,
+        587,
+        1436,
+        909
+      ],
+      "file": "sprites/shuffle.png",
+      "size": [
+        369,
+        322
+      ],
+      "targetBox": [
+        48,
+        48
+      ],
+      "exports": [
+        "shuffle-preview.png",
+        "shuffle@2x-preview.png",
+        "shuffle@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "d7539fef4b95d4789e91a59a799f06dc2cf8daee0cb422fe60bb8b7ac049bbab"
+    },
+    {
+      "name": "button-teal",
+      "group": "controls",
+      "master": "masters/controls.png",
+      "sourceRect": [
+        64,
+        73,
+        731,
+        247
+      ],
+      "file": "sprites/button-teal.png",
+      "size": [
+        667,
+        174
+      ],
+      "targetBox": [
+        280,
+        56
+      ],
+      "exports": [
+        "button-teal-preview.png",
+        "button-teal@2x-preview.png",
+        "button-teal@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "f05b9c99940f65b773603edc9b209d71927c7d7648f47a4bfbb2e609f7bb5d0a"
+    },
+    {
+      "name": "button-teal-pressed",
+      "group": "controls",
+      "master": "masters/controls.png",
+      "sourceRect": [
+        789,
+        73,
+        1462,
+        247
+      ],
+      "file": "sprites/button-teal-pressed.png",
+      "size": [
+        673,
+        174
+      ],
+      "targetBox": [
+        280,
+        56
+      ],
+      "exports": [
+        "button-teal-pressed-preview.png",
+        "button-teal-pressed@2x-preview.png",
+        "button-teal-pressed@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "4d93453d479f6ba74a69c2bd9271113acf7c242ccd087fdda61a7f091de898ca"
+    },
+    {
+      "name": "button-garnet",
+      "group": "controls",
+      "master": "masters/controls.png",
+      "sourceRect": [
+        64,
+        319,
+        730,
+        494
+      ],
+      "file": "sprites/button-garnet.png",
+      "size": [
+        666,
+        175
+      ],
+      "targetBox": [
+        280,
+        56
+      ],
+      "exports": [
+        "button-garnet-preview.png",
+        "button-garnet@2x-preview.png",
+        "button-garnet@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "725fe177ab4a793dab4171855743032a56f07438bacc936109a795cac7868428"
+    },
+    {
+      "name": "button-disabled",
+      "group": "controls",
+      "master": "masters/controls.png",
+      "sourceRect": [
+        788,
+        319,
+        1470,
+        495
+      ],
+      "file": "sprites/button-disabled.png",
+      "size": [
+        682,
+        176
+      ],
+      "targetBox": [
+        280,
+        56
+      ],
+      "exports": [
+        "button-disabled-preview.png",
+        "button-disabled@2x-preview.png",
+        "button-disabled@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "575c8b4e7d79e3b5ad4c274e5266e5f15ee32a28e72cc39c9e52bedd04756c62"
+    },
+    {
+      "name": "icon-frame",
+      "group": "controls",
+      "master": "masters/controls.png",
+      "sourceRect": [
+        88,
+        567,
+        453,
+        928
+      ],
+      "file": "sprites/icon-frame.png",
+      "size": [
+        365,
+        361
+      ],
+      "targetBox": [
+        44,
+        44
+      ],
+      "exports": [
+        "icon-frame-preview.png",
+        "icon-frame@2x-preview.png",
+        "icon-frame@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "ee83702495a1f0b1fcc91f1b404c18af2443849e182bbff3397a3c5b822ac73d"
+    },
+    {
+      "name": "panel",
+      "group": "controls",
+      "master": "masters/controls.png",
+      "sourceRect": [
+        557,
+        550,
+        1459,
+        953
+      ],
+      "file": "sprites/panel.png",
+      "size": [
+        902,
+        403
+      ],
+      "targetBox": [
+        340,
+        220
+      ],
+      "exports": [
+        "panel-preview.png",
+        "panel@2x-preview.png",
+        "panel@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "6b999f2f82285a643955ac69f6a2d738edfa65b56c046c4e62efed58bc997495"
+    },
+    {
+      "name": "back",
+      "group": "icons",
+      "master": "masters/icons.png",
+      "sourceRect": [
+        87,
+        101,
+        315,
+        302
+      ],
+      "file": "sprites/back.png",
+      "size": [
+        228,
+        201
+      ],
+      "targetBox": [
+        28,
+        28
+      ],
+      "exports": [
+        "back-preview.png",
+        "back@2x-preview.png",
+        "back@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "105bb4f45b5ca9ed3ba3b5e106d761ea6032c4079b4dc9341b6833933ebdd3cc"
+    },
+    {
+      "name": "settings",
+      "group": "icons",
+      "master": "masters/icons.png",
+      "sourceRect": [
+        425,
+        72,
+        671,
+        316
+      ],
+      "file": "sprites/settings.png",
+      "size": [
+        246,
+        244
+      ],
+      "targetBox": [
+        28,
+        28
+      ],
+      "exports": [
+        "settings-preview.png",
+        "settings@2x-preview.png",
+        "settings@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "3b6452e8eba406b3f458182a60fa07642347a52348a673f9c4af457efeafc0fa"
+    },
+    {
+      "name": "plus",
+      "group": "icons",
+      "master": "masters/icons.png",
+      "sourceRect": [
+        793,
+        81,
+        1016,
+        308
+      ],
+      "file": "sprites/plus.png",
+      "size": [
+        223,
+        227
+      ],
+      "targetBox": [
+        28,
+        28
+      ],
+      "exports": [
+        "plus-preview.png",
+        "plus@2x-preview.png",
+        "plus@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "4e3faad63bf8acce21f29b75d079a34dd82deb7221c049ff7fe871376cee2876"
+    },
+    {
+      "name": "close",
+      "group": "icons",
+      "master": "masters/icons.png",
+      "sourceRect": [
+        1155,
+        85,
+        1372,
+        306
+      ],
+      "file": "sprites/close.png",
+      "size": [
+        217,
+        221
+      ],
+      "targetBox": [
+        28,
+        28
+      ],
+      "exports": [
+        "close-preview.png",
+        "close@2x-preview.png",
+        "close@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "878182fbd458dca2af73cbc708b294d90e841f7f0f3ac8f9cd9d30be603d7293"
+    },
+    {
+      "name": "coin",
+      "group": "icons",
+      "master": "masters/icons.png",
+      "sourceRect": [
+        69,
+        422,
+        303,
+        665
+      ],
+      "file": "sprites/coin.png",
+      "size": [
+        234,
+        243
+      ],
+      "targetBox": [
+        28,
+        28
+      ],
+      "exports": [
+        "coin-preview.png",
+        "coin@2x-preview.png",
+        "coin@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "427de867babedb68723845c913b3801eb3a221e7e638c70bd45374bb8a5af693"
+    },
+    {
+      "name": "star",
+      "group": "icons",
+      "master": "masters/icons.png",
+      "sourceRect": [
+        420,
+        416,
+        678,
+        666
+      ],
+      "file": "sprites/star.png",
+      "size": [
+        258,
+        250
+      ],
+      "targetBox": [
+        28,
+        28
+      ],
+      "exports": [
+        "star-preview.png",
+        "star@2x-preview.png",
+        "star@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "42497008b256fca545908f5643155b538c7dcf7f81c6538929c7f575c93f96a3"
+    },
+    {
+      "name": "lock",
+      "group": "icons",
+      "master": "masters/icons.png",
+      "sourceRect": [
+        800,
+        416,
+        1008,
+        659
+      ],
+      "file": "sprites/lock.png",
+      "size": [
+        208,
+        243
+      ],
+      "targetBox": [
+        28,
+        28
+      ],
+      "exports": [
+        "lock-preview.png",
+        "lock@2x-preview.png",
+        "lock@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "2c166ff368b5d67bb9a07d1967c202012d2895b2e3561621fe0ec61d7772e774"
+    },
+    {
+      "name": "play",
+      "group": "icons",
+      "master": "masters/icons.png",
+      "sourceRect": [
+        1177,
+        437,
+        1365,
+        657
+      ],
+      "file": "sprites/play.png",
+      "size": [
+        188,
+        220
+      ],
+      "targetBox": [
+        28,
+        28
+      ],
+      "exports": [
+        "play-preview.png",
+        "play@2x-preview.png",
+        "play@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "9cd6aabb8c9bf18e7425026ccee5ad00e98d204a36c9a189c82bde6e376ec14e"
+    },
+    {
+      "name": "video",
+      "group": "icons",
+      "master": "masters/icons.png",
+      "sourceRect": [
+        64,
+        795,
+        316,
+        987
+      ],
+      "file": "sprites/video.png",
+      "size": [
+        252,
+        192
+      ],
+      "targetBox": [
+        28,
+        28
+      ],
+      "exports": [
+        "video-preview.png",
+        "video@2x-preview.png",
+        "video@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "b73e866b4ff16500a7c6fecd9c1967fa4606916c9533ffc1ebc0fadce8cbcac3"
+    },
+    {
+      "name": "clock",
+      "group": "icons",
+      "master": "masters/icons.png",
+      "sourceRect": [
+        425,
+        770,
+        660,
+        1012
+      ],
+      "file": "sprites/clock.png",
+      "size": [
+        235,
+        242
+      ],
+      "targetBox": [
+        28,
+        28
+      ],
+      "exports": [
+        "clock-preview.png",
+        "clock@2x-preview.png",
+        "clock@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "55a377eeba5457a0bb93ba5862c76323778af4d1ac653d3ba7ceaf6c03b6cf42"
+    },
+    {
+      "name": "map",
+      "group": "icons",
+      "master": "masters/icons.png",
+      "sourceRect": [
+        762,
+        767,
+        1039,
+        1002
+      ],
+      "file": "sprites/map.png",
+      "size": [
+        277,
+        235
+      ],
+      "targetBox": [
+        28,
+        28
+      ],
+      "exports": [
+        "map-preview.png",
+        "map@2x-preview.png",
+        "map@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "2c6a3d0f1bed233bfeb3968603487941efd6bad5cc5cb7af92d2cfd66df5b70a"
+    },
+    {
+      "name": "shop",
+      "group": "icons",
+      "master": "masters/icons.png",
+      "sourceRect": [
+        1130,
+        780,
+        1396,
+        996
+      ],
+      "file": "sprites/shop.png",
+      "size": [
+        266,
+        216
+      ],
+      "targetBox": [
+        28,
+        28
+      ],
+      "exports": [
+        "shop-preview.png",
+        "shop@2x-preview.png",
+        "shop@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "4ffeb45ac3d92aadba9537ff53f1758b6bf640fdec0cd60d9d2b29828ce59369"
+    },
+    {
+      "name": "splash-gold",
+      "group": "fx",
+      "master": "masters/fx.png",
+      "sourceRect": [
+        59,
+        156,
+        456,
+        392
+      ],
+      "file": "sprites/splash-gold.png",
+      "size": [
+        397,
+        236
+      ],
+      "targetBox": [
+        96,
+        96
+      ],
+      "exports": [
+        "splash-gold-preview.png",
+        "splash-gold@2x-preview.png",
+        "splash-gold@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "56f5e35db961aaa19ea8bfb3c4a3538c2aa5b402f6d027ba72606c00e0f5eedd"
+    },
+    {
+      "name": "splash-lapis",
+      "group": "fx",
+      "master": "masters/fx.png",
+      "sourceRect": [
+        560,
+        95,
+        972,
+        411
+      ],
+      "file": "sprites/splash-lapis.png",
+      "size": [
+        412,
+        316
+      ],
+      "targetBox": [
+        96,
+        96
+      ],
+      "exports": [
+        "splash-lapis-preview.png",
+        "splash-lapis@2x-preview.png",
+        "splash-lapis@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "d29f3c134615058a5a246487391cf64637c734bad793d2e1c829f4fdccd6313e"
+    },
+    {
+      "name": "splash-teal",
+      "group": "fx",
+      "master": "masters/fx.png",
+      "sourceRect": [
+        1043,
+        181,
+        1509,
+        365
+      ],
+      "file": "sprites/splash-teal.png",
+      "size": [
+        466,
+        184
+      ],
+      "targetBox": [
+        96,
+        96
+      ],
+      "exports": [
+        "splash-teal-preview.png",
+        "splash-teal@2x-preview.png",
+        "splash-teal@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "b54922b6838fb4f21e35acb609a2b51f62ec26225114a4db13294dfc4f2193c7"
+    },
+    {
+      "name": "splash-garnet",
+      "group": "fx",
+      "master": "masters/fx.png",
+      "sourceRect": [
+        47,
+        599,
+        454,
+        921
+      ],
+      "file": "sprites/splash-garnet.png",
+      "size": [
+        407,
+        322
+      ],
+      "targetBox": [
+        96,
+        96
+      ],
+      "exports": [
+        "splash-garnet-preview.png",
+        "splash-garnet@2x-preview.png",
+        "splash-garnet@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "55aff58b1237f14b8a65e45a2eea91d5ca60d22517e51f65d819d345a97778cb"
+    },
+    {
+      "name": "splash-copper",
+      "group": "fx",
+      "master": "masters/fx.png",
+      "sourceRect": [
+        568,
+        663,
+        968,
+        902
+      ],
+      "file": "sprites/splash-copper.png",
+      "size": [
+        400,
+        239
+      ],
+      "targetBox": [
+        96,
+        96
+      ],
+      "exports": [
+        "splash-copper-preview.png",
+        "splash-copper@2x-preview.png",
+        "splash-copper@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        253
+      ],
+      "sha256": "db5f4165b6ae51e8525e6cd4f44bc5524d9725920840ea626dfe477ea91b9e9f"
+    },
+    {
+      "name": "splash-silver",
+      "group": "fx",
+      "master": "masters/fx.png",
+      "sourceRect": [
+        1075,
+        597,
+        1482,
+        920
+      ],
+      "file": "sprites/splash-silver.png",
+      "size": [
+        407,
+        323
+      ],
+      "targetBox": [
+        96,
+        96
+      ],
+      "exports": [
+        "splash-silver-preview.png",
+        "splash-silver@2x-preview.png",
+        "splash-silver@3x-preview.png"
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "b57204a10ea127ebc6df3191ad5b7a8aceb5dce7dc034fc80686bfc58c29afff"
+    }
+  ]
+}

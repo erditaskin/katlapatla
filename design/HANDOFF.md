@@ -2,7 +2,7 @@
 
 ## Onaylanan ekranlar
 
-03 kartela, 04 oyun ekranı ve 05 harita/mağaza/başarı ekranları kullanıcı tarafından onaylandı. 06 oyun popup’ları ve 07 sistem ekranları yeni adaylardır. Uygulama koduna başlanmadı.
+03 kartela, 04 oyun ekranı ve 05 harita/mağaza/başarı ekranları kullanıcı tarafından onaylandı. 06 oyun popup’ları ve 07 sistem ekranları da kullanıcı tarafından onaylandı. Uygulama koduna başlanmadı.
 
 ## Ekran ve durum kapsamı
 
