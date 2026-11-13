@@ -2,11 +2,17 @@
 
 ## Dünya ve kontrast
 
-Fantastik açık gökyüzü, pastel bulutlar, yüzen adacıklar ve su şelaleleri. Arka plan sakin; oynanabilir balonlar daha güçlü renk ve net siluet taşır. Madencilik, kuyumcu, KP taş logosu veya Ultimatum varlıkları kullanılmaz.
+Antik Mısır ağırlıklı, yetişkinlere hitap eden karanlık ve premium dünya. Keskin geometrili bazalt ve kumtaşı mimarisi, aşınmış yüzeyler, oyma paneller ve kontrollü eskitilmiş altın detaylar kullanılır. Gotik etki ana tema değildir. Önceki pastel bulut ve oyuncak çizimler güncel hedef değildir; arşivde korunur.
 
-Normal renk adayları: mercan `#F46D83`, mandalina `#FFA45B`, güneş sarısı `#F7D65A`, yeşil `#8ED783`, turkuaz `#57C9DE`, mor `#AA8DDD`. Bunlar kartela adaylarıdır; son renkler kullanıcı görsel onayıyla sabitlenir. Renk tek ayırt etme aracı olmaz; küçük, sade motifler denenir.
+Renk adayları: eskitilmiş altın `#C6A15B`, lapis `#28538A`, oksitli teal `#368F87`, koyu bordo `#9B3E58`, kızıl bakır `#B87546`, eskitilmiş gümüş/fildişi `#C8C6B8`. Zemin kömür/bazalt `#202321`, açık yazı `#EFE7D7`. Bunlar ilk kartela adaylarıdır; son tokenlar görsel onayla sabitlenir. Balon ve zemin yalnızca koyulukla değil ton ve sembolle de ayrılır.
 
-Balonlar gerçek su balonu gibi hafif sarkar, görünür bağ taşır; yüz, göz veya ağız içermez. Patlama su tacı, ince su tabakası ve damlacık üretir. Duman veya ateş ana efekt değildir.
+Mısır esinli sade sembol adayları: güneş diski, ankh, tüy, lotus, su çizgisi ve geometrik sütun. Bunlar stilize sanat motifleridir; tarihsel doğruluk iddiası yoktur. Her balonda tek büyük işaret kullanılır; küçük ekranda okunmayan sık yazı ve süslerden kaçınılır.
+
+Çevre keskin hatlı olabilir; su balonunun gövdesi esnek kalmalıdır. İnce metalize zar, alt bağ çevresinde hafif kırışıklık, yumuşak deformasyon ve kısmen görünür su çizgisi önerilir. Balon sert zırh, taş, mücevher, metal küre veya iksir şişesi gibi okunmamalıdır. Sıvı metal değil sudur.
+
+4’lü kalp ve 5’li hediye fikri korunur. Kalpte su bandı yönü, hediyede esnek metalik kurdele adaydır. Patlama ateş, metal şarapneli veya para saçılması değil renkli su, sıvı tabakası ve damlalar üretir.
+
+Başlıklarda kontrollü oyma/antik karakter; küçük metinlerde sade ve yüksek okunabilirlik hedeflenir. Gerçek font dosyası henüz seçilmemiştir. Görseldeki wordmark da nihai logo olarak onaylanmış sayılmaz.
 
 ## Ekran önerisi
 

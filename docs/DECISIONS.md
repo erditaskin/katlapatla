@@ -4,8 +4,8 @@
 
 - Yeni proje, Ultimatum’dan bağımsızdır. Yerel klasör `katlapatla`, hedef depo `erditaskin/katlapatla` olur.
 - Klasik kaydırarak üçlü eşleştirme mekanizması ve su dolu balonlar kullanılır.
-- Dünya pastel ve fantastiktir. Balonlar yüzsüz, parlak, yarı saydam, düğümlü ve su dolu görünür.
-- Hedef genel kitledir; ürün çocuklara özel konumlandırılmaz.
+- Dünya antik Mısır ağırlıklı, karanlık, rustik ve premiumdur. Keskin mimari hatlar, aşınmış taş ve eskitilmiş metal kullanılır. Balonlar yüzsüz, metalik yansımalı, esnek, kısmen yarı saydam ve su dolu görünür.
+- Görsel dil yetişkinlere hitap eder; ürün çocuklara özel konumlandırılmaz. Mağaza yaş derecelendirmesi bu sanat kararıyla otomatik belirlenmiş sayılmaz.
 - İlk sürüm bölüm haritası, mağaza, ödüllü reklam ve uygulama içi satın alma içerir.
 - Tek harcanabilir para birimi altındır. Altın oynayarak kazanılabilir ve satın alınabilir. Yıldızlar yalnızca bölüm başarısını gösterir.
 - İlk yayın hedefi 50 tasarlanmış bölümdür. İlk 10 bölüm mekanik, sanat, ses ve denge doğrulamasında kullanılır.
@@ -49,3 +49,7 @@
 7. Mağaza/reklam sandbox entegrasyonları ve kalan bölümler.
 
 Bu tasarım aşamasında uygulama kodu, gerçek para işlemi veya reklam SDK’sı yoktur. Denge ve gelir performansı doğrulanmış kabul edilmez.
+
+## Görsel yön değişikliği — 13 Kasım 2026
+
+İlk pastel/fantastik kartela ve ekran kullanıcı tarafından fazla çocuk oyunu hissinde bulundu. Kullanıcı antik Mısır ağırlıklı, karanlık ve premium yönü seçti. Önceki iki çizim ve promptları `design/archive/pastel-v1/` altında tarihsel aday olarak korunur; yeni uygulamanın görsel hedefi değildir. Oynanış, 50 bölüm, can, altın ve gelir modeli kararları değişmedi. Yeni kartela henüz görsel onay bekler; uygulama koduna başlanmaz.

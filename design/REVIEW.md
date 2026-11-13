@@ -1,22 +1,21 @@
-# First visual review
+# Antik Mısır premium kartelası — görsel inceleme
 
-Status: design candidates, awaiting user approval. These files are generated with built-in Imagegen; full prompts are in `PROMPTS.md`.
+Güncel dünya yönü kullanıcı tarafından seçildi. `references/03-egypt-premium-palette-v1.png` içindeki sanat henüz onay bekleyen adaydır. Önceki pastel kartela ve ana ekran `archive/pastel-v1/` altındadır; uygulama hedefi değildir.
 
-## Palette and balloon sheet
+## Aday içerik
 
-`references/01-balloon-palette-v1.png` shows six normal colors with supporting identity motifs, a heart jet, a gift color-clear power and a pressure balloon. The initial extra upper knots were removed. Normal balloons use a smooth closed top and one bottom tie.
+Altı yüzsüz su balonu: altın/güneş, lapis/ankh, teal/tüy, bordo/lotus, bakır/su çizgileri ve gümüş/geometrik sütun. Tek alt bağ, su çizgisi, kısmi geçirgenlik ve metalik yüzey yansıması görünür. Kalp, su bandıyla; hediye, metalik kurdeleyle ayrılır. Arka plan aşınmış taş ve keskin geometrili Mısır esinli mimaridir.
 
-The heart and gift implement the user's visual suggestion as candidates. A line through the heart communicates jet direction. Gift contents are decorative water bubbles, not random rewards.
+## İncelenenler
 
-## Gameplay concept
+- Büyük ve küçük örneklerde altı ayrı renk ve sade sembol korunuyor.
+- Ek üst düğüm yok; alt bağlar görünür.
+- Kalp ve hediyenin şekli normal parçalardan ayrılıyor.
+- Efekt örnekleri su damlası ve su tabakası; metal parçacığı veya ateş ana efekt değil.
+- PNG başlığı, dosya boyutu ve SHA-256 kaydedildi.
 
-`references/02-gameplay-v1.png` places the palette in a portrait phone composition: life/gold/settings, level goals and moves, an 8×8 board, score and three helper controls. Screen numbers are illustrative, not economy decisions. The final board should contain 64 balloons; an initially missing bottom-right balloon is corrected before saving the selected reference.
+## Onayda değerlendirilecekler
 
-## What this review does not establish
+Balonun esnek su balonu mu, fazla cam/sert kap mı okunduğu; metalik yüzey yoğunluğu; küçük işaretlerin kontrastı; toplam karanlık/parlaklık dengesi. Antik semboller stilizedir; tarihsel doğruluk iddiası yoktur.
 
-- No React Native code or simulator build exists yet.
-- No runtime transparent sprites, exact 48-pixel exports, actual fonts or audio samples have been delivered.
-- The concepts are not a measured pixel-perfect implementation contract. Fonts, safe areas, dimensions and responsive behavior must be specified and tested after direction approval.
-- Prices, rewards and the combination matrix remain separate product decisions.
-
-Review priorities: material should read as a flexible water balloon rather than glass; six colors and motifs should remain distinct; heart and gift should be recognizable at board size; background and HUD should support the board rather than overwhelm it.
+Bu bir konsept karteladır. Şeffaf runtime sprite, gerçek 48 px çıktı, font dosyası, ses örneği veya cihazda çalışan ekran henüz yoktur. Kullanıcı kartelayı onayladıktan sonra ana oyun ekranı bu yönde yeniden çizilir; pastel ekranın üstüne yalnızca renk değiştirme uygulanmaz.
