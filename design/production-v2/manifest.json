@@ -1,0 +1,104 @@
+[
+  {
+    "name": "sun",
+    "sourceRect": [
+      138,
+      26,
+      501,
+      489
+    ],
+    "size": [
+      363,
+      463
+    ],
+    "alphaRange": [
+      0,
+      254
+    ]
+  },
+  {
+    "name": "ankh",
+    "sourceRect": [
+      581,
+      26,
+      953,
+      490
+    ],
+    "size": [
+      372,
+      464
+    ],
+    "alphaRange": [
+      0,
+      254
+    ]
+  },
+  {
+    "name": "feather",
+    "sourceRect": [
+      1028,
+      26,
+      1396,
+      489
+    ],
+    "size": [
+      368,
+      463
+    ],
+    "alphaRange": [
+      0,
+      254
+    ]
+  },
+  {
+    "name": "lotus",
+    "sourceRect": [
+      134,
+      525,
+      507,
+      994
+    ],
+    "size": [
+      373,
+      469
+    ],
+    "alphaRange": [
+      0,
+      254
+    ]
+  },
+  {
+    "name": "waves",
+    "sourceRect": [
+      576,
+      525,
+      953,
+      994
+    ],
+    "size": [
+      377,
+      469
+    ],
+    "alphaRange": [
+      0,
+      254
+    ]
+  },
+  {
+    "name": "pillar",
+    "sourceRect": [
+      1024,
+      525,
+      1402,
+      994
+    ],
+    "size": [
+      378,
+      469
+    ],
+    "alphaRange": [
+      0,
+      254
+    ]
+  }
+]
