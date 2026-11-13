@@ -1,0 +1,158 @@
+[
+  {
+    "file": "reference-cuts/level-start-reference.png",
+    "source": "references/06-egypt-gameplay-popups-v1.png",
+    "rect": [
+      110,
+      70,
+      520,
+      543
+    ],
+    "width": 410,
+    "height": 473,
+    "purpose": "lossless reference crop; not transparent runtime UI"
+  },
+  {
+    "file": "reference-cuts/extra-moves-reference.png",
+    "source": "references/06-egypt-gameplay-popups-v1.png",
+    "rect": [
+      575,
+      70,
+      983,
+      543
+    ],
+    "width": 408,
+    "height": 473,
+    "purpose": "lossless reference crop; not transparent runtime UI"
+  },
+  {
+    "file": "reference-cuts/no-lives-reference.png",
+    "source": "references/06-egypt-gameplay-popups-v1.png",
+    "rect": [
+      1044,
+      70,
+      1458,
+      543
+    ],
+    "width": 414,
+    "height": 473,
+    "purpose": "lossless reference crop; not transparent runtime UI"
+  },
+  {
+    "file": "reference-cuts/pause-reference.png",
+    "source": "references/06-egypt-gameplay-popups-v1.png",
+    "rect": [
+      110,
+      560,
+      520,
+      935
+    ],
+    "width": 410,
+    "height": 375,
+    "purpose": "lossless reference crop; not transparent runtime UI"
+  },
+  {
+    "file": "reference-cuts/exit-confirm-reference.png",
+    "source": "references/06-egypt-gameplay-popups-v1.png",
+    "rect": [
+      575,
+      560,
+      983,
+      935
+    ],
+    "width": 408,
+    "height": 375,
+    "purpose": "lossless reference crop; not transparent runtime UI"
+  },
+  {
+    "file": "reference-cuts/level-failed-reference.png",
+    "source": "references/06-egypt-gameplay-popups-v1.png",
+    "rect": [
+      1044,
+      560,
+      1458,
+      935
+    ],
+    "width": 414,
+    "height": 375,
+    "purpose": "lossless reference crop; not transparent runtime UI"
+  },
+  {
+    "file": "reference-cuts/loading-reference.png",
+    "source": "references/07-egypt-system-popups-v1.png",
+    "rect": [
+      88,
+      80,
+      535,
+      510
+    ],
+    "width": 447,
+    "height": 430,
+    "purpose": "lossless reference crop; not transparent runtime UI"
+  },
+  {
+    "file": "reference-cuts/settings-reference.png",
+    "source": "references/07-egypt-system-popups-v1.png",
+    "rect": [
+      546,
+      80,
+      990,
+      510
+    ],
+    "width": 444,
+    "height": 430,
+    "purpose": "lossless reference crop; not transparent runtime UI"
+  },
+  {
+    "file": "reference-cuts/tutorial-reference.png",
+    "source": "references/07-egypt-system-popups-v1.png",
+    "rect": [
+      999,
+      80,
+      1455,
+      510
+    ],
+    "width": 456,
+    "height": 430,
+    "purpose": "lossless reference crop; not transparent runtime UI"
+  },
+  {
+    "file": "reference-cuts/helper-confirm-reference.png",
+    "source": "references/07-egypt-system-popups-v1.png",
+    "rect": [
+      88,
+      522,
+      535,
+      942
+    ],
+    "width": 447,
+    "height": 420,
+    "purpose": "lossless reference crop; not transparent runtime UI"
+  },
+  {
+    "file": "reference-cuts/network-error-reference.png",
+    "source": "references/07-egypt-system-popups-v1.png",
+    "rect": [
+      546,
+      522,
+      990,
+      942
+    ],
+    "width": 444,
+    "height": 420,
+    "purpose": "lossless reference crop; not transparent runtime UI"
+  },
+  {
+    "file": "reference-cuts/transaction-states-reference.png",
+    "source": "references/07-egypt-system-popups-v1.png",
+    "rect": [
+      999,
+      522,
+      1455,
+      942
+    ],
+    "width": 456,
+    "height": 420,
+    "purpose": "lossless reference crop; not transparent runtime UI"
+  }
+]

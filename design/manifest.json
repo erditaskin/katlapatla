@@ -1,5 +1,5 @@
 {
-  "status": "egypt-palette-approved-gameplay-awaiting-user-review",
+  "status": "core-screens-approved-remaining-popups-awaiting-review",
   "tool": "built-in Imagegen",
   "assets": [
     {
@@ -8,7 +8,7 @@
       "height": 1024,
       "bytes": 2898512,
       "sha256": "363264826bdc58adbea37a20a7529722e73f85c05ef80bc7f81731837ff8d52d",
-      "approval": "material-and-color-direction-approved"
+      "approval": "approved-visual-direction-and-layout"
     },
     {
       "file": "references/04-egypt-gameplay-v1.png",
@@ -16,7 +16,39 @@
       "height": 1846,
       "bytes": 3055003,
       "sha256": "979d4b5cafca8cd745644d1dd527fc7f77356cca7e0eeb1b81bd51a88d1eb39a",
-      "approval": "awaiting-layout-review"
+      "approval": "approved-visual-direction-and-layout"
+    },
+    {
+      "file": "references/05-egypt-map-store-result-v1.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2980362,
+      "sha256": "a6b677b6a82d50a9aae2bdcdb07759bc1f4057db6708583965088a9727391442",
+      "approval": "approved-layout"
+    },
+    {
+      "file": "references/06-egypt-gameplay-popups-v1.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2675297,
+      "sha256": "f513ea11c6f223b008aee10dc061ffacb67acc2da347da13d9a373a1b90e8fa6",
+      "approval": "awaiting-review"
+    },
+    {
+      "file": "references/07-egypt-system-popups-v1.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3035316,
+      "sha256": "679c48dcc8a1c85a4b66ffca38595460861078697877993efa853fb8eb6bcf89",
+      "approval": "awaiting-review"
+    },
+    {
+      "file": "references/08-balloon-master-candidate-v1.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 1424571,
+      "sha256": "17a71959ab55d7e38ba3a2de8ac30e6ec084ca20ebc90810ef6c5e5bfaedf05a",
+      "approval": "not-runtime-ready-spacing-review"
     }
   ],
   "archive": "archive/pastel-v1"

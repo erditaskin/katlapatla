@@ -30,3 +30,8 @@ Taş yüzey, keskin çerçeveler ve altın kenarlar balonlardan ayrı bir katman
 ## Ana ekran onayı ve diğer ekranlar
 
 Kullanıcı ana ekran düzenini onayladı. 05 numaralı kartela harita, mağaza ve başarılı bölüm sonucunu aynı görsel dilde sunar; bu ekranlar henüz onaylanmadı. Fiyatlar ve puanlar örnektir. Haritada 1. düğüm alt panelin arkasında kaldığından uygulamada kaydırma ve panel örtüşmesi çözülmelidir. Canlar doluyken satın alma ve reklamla can alma eylemleri devre dışı olmalıdır. Sonuç ödülü yalnızca bir kez yazılır. Bunlar konsept görselleridir; uygulama kodu, çalışma zamanı sprite dosyaları ve kesin font ölçüleri değildir.
+
+
+## Yeni kullanıcı onayı ve kalan tasarımlar
+
+Harita, mağaza ve başarılı sonuç ekranları onaylandı. 06 ve 07 yeni inceleme adaylarıdır. 12 kayıpsız referans kesimi üretildi. 08 balon masterı boşluk nedeniyle üretime hazır değildir. Öğretici karteladaki üç hazır eşleşme gerçek başlangıç tahtası olarak kullanılmamalıdır; etkileşimli öğreticide yalnızca doğru komşu değişimiyle eşleşme oluşmalıdır. Ayrıntılı üretim sınırları HANDOFF.md içindedir.
