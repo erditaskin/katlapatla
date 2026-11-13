@@ -1080,6 +1080,195 @@
         254
       ],
       "sha256": "b57204a10ea127ebc6df3191ad5b7a8aceb5dce7dc034fc80686bfc58c29afff"
+    },
+    {
+      "name": "popup-frame",
+      "group": "extras",
+      "master": "masters/extras.png",
+      "sourceRect": [
+        79,
+        4,
+        471,
+        447
+      ],
+      "file": "sprites/popup-frame.png",
+      "size": [
+        392,
+        443
+      ],
+      "targetBox": [
+        340,
+        400
+      ],
+      "sha256": "a4b7e718b9dd56fc6b7c4e6c4b8ac0ae0b80a8a6947fa81107e251ef184b8ed0"
+    },
+    {
+      "name": "resource-counter",
+      "group": "extras",
+      "master": "masters/extras.png",
+      "sourceRect": [
+        537,
+        161,
+        1001,
+        315
+      ],
+      "file": "sprites/resource-counter.png",
+      "size": [
+        464,
+        154
+      ],
+      "targetBox": [
+        132,
+        44
+      ],
+      "sha256": "2608518e06acc57f4c697b6b7f353d55528778ad3a264d4f3d2acc5b93c83eac"
+    },
+    {
+      "name": "progress-trough",
+      "group": "extras",
+      "master": "masters/extras.png",
+      "sourceRect": [
+        1049,
+        209,
+        1471,
+        265
+      ],
+      "file": "sprites/progress-trough.png",
+      "size": [
+        422,
+        56
+      ],
+      "targetBox": [
+        280,
+        32
+      ],
+      "sha256": "9858dd7744a3b6470e774ac50cedf2fe222a9bae77bbeaa95b8a2671e66d730b"
+    },
+    {
+      "name": "progress-fill",
+      "group": "extras",
+      "master": "masters/extras.png",
+      "sourceRect": [
+        55,
+        568,
+        493,
+        644
+      ],
+      "file": "sprites/progress-fill.png",
+      "size": [
+        438,
+        76
+      ],
+      "targetBox": [
+        270,
+        26
+      ],
+      "sha256": "ce7182bd80c193d6aed3ccd8949bea5540290f2f84a10fb7d06255f74e111204"
+    },
+    {
+      "name": "selection",
+      "group": "extras",
+      "master": "masters/extras.png",
+      "sourceRect": [
+        653,
+        495,
+        883,
+        713
+      ],
+      "file": "sprites/selection.png",
+      "size": [
+        230,
+        218
+      ],
+      "targetBox": [
+        48,
+        48
+      ],
+      "sha256": "cb4dd8df9334b867dff06fd4f74fdc7b76cb2048c068a4e13b6aac7d64480a19"
+    },
+    {
+      "name": "toggle-on",
+      "group": "extras",
+      "master": "masters/extras.png",
+      "sourceRect": [
+        1051,
+        529,
+        1478,
+        684
+      ],
+      "file": "sprites/toggle-on.png",
+      "size": [
+        427,
+        155
+      ],
+      "targetBox": [
+        64,
+        32
+      ],
+      "sha256": "39a239d462b22c9076c6b3a91d7475f02994f265790e4193f5b77021565a524c"
+    },
+    {
+      "name": "toggle-off",
+      "group": "extras",
+      "master": "masters/extras.png",
+      "sourceRect": [
+        74,
+        813,
+        481,
+        972
+      ],
+      "file": "sprites/toggle-off.png",
+      "size": [
+        407,
+        159
+      ],
+      "targetBox": [
+        64,
+        32
+      ],
+      "sha256": "97fd529d96f1ba1d0178b8e6a8d5757723cbd1672ff98ccd999c78deb3286ac9"
+    },
+    {
+      "name": "level-node",
+      "group": "extras",
+      "master": "masters/extras.png",
+      "sourceRect": [
+        572,
+        787,
+        961,
+        991
+      ],
+      "file": "sprites/level-node.png",
+      "size": [
+        389,
+        204
+      ],
+      "targetBox": [
+        64,
+        64
+      ],
+      "sha256": "2fa4ed35bf745800a2e4feea91501463955e466cf61e2bb42f27e7bee92c0be3"
+    },
+    {
+      "name": "count-badge",
+      "group": "extras",
+      "master": "masters/extras.png",
+      "sourceRect": [
+        1109,
+        832,
+        1409,
+        953
+      ],
+      "file": "sprites/count-badge.png",
+      "size": [
+        300,
+        121
+      ],
+      "targetBox": [
+        28,
+        22
+      ],
+      "sha256": "bdea14d075bab37661a9d8ce86b3fd9aed70927b507ee47303d3697597119b64"
     }
   ]
 }

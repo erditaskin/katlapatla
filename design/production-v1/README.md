@@ -17,3 +17,7 @@ Koyu zemindeki gerçek boyut kartelası görsel olarak incelendi. Altı normal r
 ## Eksik teslimler
 
 Bu set tüm uygulama varlıklarının tamamlandığı anlamına gelmez. Yazısız ekran arka planları, logo masterı, uzun popup çerçevesi, sayaç ve ilerleme parçaları, seçili tahta köşeleri, açık/kapalı toggle parçaları, harita düğümleri ve mağaza paketleri henüz bağımsız değildir. Dokuz parçalı çerçeve ölçekleme ve farklı telefon oranları doğrulanmadı. Gerçek fontlar seçilmedi. Efektler statik tepe kareleridir; patlama, su jeti ve kombo animasyon kare dizileri ile ses dosyaları henüz yoktur. Uygulama koduna geçilmedi.
+
+## Ek UI parçaları
+
+Dokuz ek parça üretildi: uzun popup çerçevesi, kaynak sayacı, ilerleme kanalı/dolumu, seçim köşeleri, iki toggle, harita düğümü ve sayı rozeti. ui-parts-390px-v1.png gerçek hedef kutularında gösterir. Uzun panelde referanstan gelen lotus süsü vardır; ayrı katman değildir. Bağımsız ekran arka planları, logo ve mağaza paketleri hâlâ üretim dışındadır. Toplam 45 bağımsız RGBA parça vardır.
