@@ -1,5 +1,5 @@
 {
-  "status": "egypt-direction-selected-artwork-awaiting-user-approval",
+  "status": "egypt-palette-approved-gameplay-awaiting-user-review",
   "tool": "built-in Imagegen",
   "assets": [
     {
@@ -7,7 +7,16 @@
       "width": 1536,
       "height": 1024,
       "bytes": 2898512,
-      "sha256": "363264826bdc58adbea37a20a7529722e73f85c05ef80bc7f81731837ff8d52d"
+      "sha256": "363264826bdc58adbea37a20a7529722e73f85c05ef80bc7f81731837ff8d52d",
+      "approval": "material-and-color-direction-approved"
+    },
+    {
+      "file": "references/04-egypt-gameplay-v1.png",
+      "width": 852,
+      "height": 1846,
+      "bytes": 3055003,
+      "sha256": "979d4b5cafca8cd745644d1dd527fc7f77356cca7e0eeb1b81bd51a88d1eb39a",
+      "approval": "awaiting-layout-review"
     }
   ],
   "archive": "archive/pastel-v1"

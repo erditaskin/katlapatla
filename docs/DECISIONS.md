@@ -52,4 +52,8 @@ Bu tasarım aşamasında uygulama kodu, gerçek para işlemi veya reklam SDK’s
 
 ## Görsel yön değişikliği — 13 Kasım 2026
 
-İlk pastel/fantastik kartela ve ekran kullanıcı tarafından fazla çocuk oyunu hissinde bulundu. Kullanıcı antik Mısır ağırlıklı, karanlık ve premium yönü seçti. Önceki iki çizim ve promptları `design/archive/pastel-v1/` altında tarihsel aday olarak korunur; yeni uygulamanın görsel hedefi değildir. Oynanış, 50 bölüm, can, altın ve gelir modeli kararları değişmedi. Yeni kartela henüz görsel onay bekler; uygulama koduna başlanmaz.
+İlk pastel/fantastik kartela ve ekran kullanıcı tarafından fazla çocuk oyunu hissinde bulundu. Kullanıcı antik Mısır ağırlıklı, karanlık ve premium yönü seçti. Önceki iki çizim ve promptları `design/archive/pastel-v1/` altında tarihsel aday olarak korunur; yeni uygulamanın görsel hedefi değildir. Oynanış, 50 bölüm, can, altın ve gelir modeli kararları değişmedi. Kullanıcı yeni kartelanın malzeme ve renk dilini onayladı; ana ekran bu doğrultuda hazırlanır. Uygulama koduna başlanmaz.
+
+## Kartela onayı
+
+Kullanıcı `03-egypt-premium-palette-v1.png` çizgisinde ana ekranın hazırlanmasını onayladı. Bu onay sanat yönü içindir; ekran düzeni, kesin font/ölçüler ve uygulamaya başlama ayrı aşamalardır.
