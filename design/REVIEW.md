@@ -25,3 +25,8 @@ Bu bir konsept karteladır. Şeffaf runtime sprite, gerçek 48 px çıktı, font
 `references/04-egypt-gameplay-v1.png` onaylı kartela ile üretildi. Görsel incelemede sekiz satır ve sekiz sütunda 64 dolu hücre, yatay bantlı bordo kalp, dikey bantlı lapis kalp ve bir hediye görüldü. Normal balonların renk/sembol eşleşmeleri korunuyor. Hedef panelinde bordo 12, lapis 15 ve 24 hamle; üstte can 5/5 ve tek altın bakiyesi; altta iğne, karıştır ve kalp yardımcıları var. Bunlar örnek oyun değerleridir, ekonomi kararları değildir.
 
 Taş yüzey, keskin çerçeveler ve altın kenarlar balonlardan ayrı bir katman olarak düşünülür. Panel kalınlığı, tipografi boyutu, sayı kontrastı ve su/metal hissi ekran onayında değerlendirilir. Büyük logo ve çerçeve yoğunluğu kullanıcı geri bildirimine açıktır. Statik çizim, çalışan ekran veya gerçek 48 px sprite testi değildir.
+
+
+## Ana ekran onayı ve diğer ekranlar
+
+Kullanıcı ana ekran düzenini onayladı. 05 numaralı kartela harita, mağaza ve başarılı bölüm sonucunu aynı görsel dilde sunar; bu ekranlar henüz onaylanmadı. Fiyatlar ve puanlar örnektir. Haritada 1. düğüm alt panelin arkasında kaldığından uygulamada kaydırma ve panel örtüşmesi çözülmelidir. Canlar doluyken satın alma ve reklamla can alma eylemleri devre dışı olmalıdır. Sonuç ödülü yalnızca bir kez yazılır. Bunlar konsept görselleridir; uygulama kodu, çalışma zamanı sprite dosyaları ve kesin font ölçüleri değildir.
