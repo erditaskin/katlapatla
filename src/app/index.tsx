@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import {
   Image,
   ImageBackground,
-  Pressable,
   ScrollView,
   View,
   useWindowDimensions,
@@ -22,6 +21,7 @@ import {
 } from "../ui/components";
 import { Header } from "../ui/Header";
 import { CommonDialog, Popup } from "../ui/Dialogs";
+import { MotionPressable } from "../ui/Feedback";
 import { art } from "../ui/art";
 export default function MapScreen() {
   const { save, update } = useSave();
@@ -81,7 +81,7 @@ export default function MapScreen() {
               const y = 4300 - i * 86;
               const locked = l.id > save.unlocked;
               return (
-                <Pressable
+                <MotionPressable
                   key={l.id}
                   testID={`level-${l.id}`}
                   accessibilityRole="button"
@@ -89,15 +89,19 @@ export default function MapScreen() {
                   accessibilityState={{ disabled: locked }}
                   disabled={locked}
                   onPress={() => setSelected(l.id)}
-                  style={{
+                  wrapperStyle={{
                     position: "absolute",
                     left: x,
                     top: y,
                     width: 72,
                     height: 72,
+                    opacity: locked ? 0.65 : 1,
+                  }}
+                  style={{
+                    width: 72,
+                    height: 72,
                     alignItems: "center",
                     justifyContent: "center",
-                    opacity: locked ? 0.65 : 1,
                   }}
                 >
                   <Image
@@ -130,7 +134,7 @@ export default function MapScreen() {
                       </View>
                     </>
                   )}
-                </Pressable>
+                </MotionPressable>
               );
             })}
           </ScrollView>

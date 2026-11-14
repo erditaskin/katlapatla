@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Pressable, View } from "react-native";
+import { View } from "react-native";
 import { router } from "expo-router";
 import { useSave } from "../state/store";
+import { MotionPressable } from "./Feedback";
 import { LIFE_MS } from "../state/model";
 import { Icon, IconButton, Label, Panel, row } from "./components";
 export function Header({
@@ -17,11 +18,12 @@ export function Header({
   return (
     <View style={[row, { paddingHorizontal: 12, gap: 6, height: 55 }]}>
       <IconButton name="back" label="Geri" onPress={onBack} />
-      <Pressable
+      <MotionPressable
         accessibilityRole="button"
         accessibilityLabel={`Can ${save.lives}/5, can al`}
         onPress={onLives}
-        style={{ flex: 1, minHeight: 44, justifyContent: "center" }}
+        wrapperStyle={{ flex: 1 }}
+        style={{ minHeight: 44, justifyContent: "center" }}
       >
         <Panel style={{ paddingVertical: 7, paddingHorizontal: 8 }}>
           <View style={row}>
@@ -30,12 +32,13 @@ export function Header({
             <Icon name="plus" size={15} />
           </View>
         </Panel>
-      </Pressable>
-      <Pressable
+      </MotionPressable>
+      <MotionPressable
         accessibilityRole="button"
         accessibilityLabel={`Altın ${save.gold}, mağaza`}
         onPress={() => router.push("/store")}
-        style={{ flex: 1.15, minHeight: 44, justifyContent: "center" }}
+        wrapperStyle={{ flex: 1.15 }}
+        style={{ minHeight: 44, justifyContent: "center" }}
       >
         <Panel style={{ paddingVertical: 9, paddingHorizontal: 8 }}>
           <View style={row}>
@@ -44,7 +47,7 @@ export function Header({
             <Icon name="plus" size={15} />
           </View>
         </Panel>
-      </Pressable>
+      </MotionPressable>
       <IconButton name="settings" label="Ayarlar" onPress={onSettings} />
     </View>
   );

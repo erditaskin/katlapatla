@@ -1,8 +1,8 @@
 import React from "react";
 import {
+  Animated,
   Image,
   ImageBackground,
-  Pressable,
   StyleSheet,
   Text,
   View,
@@ -12,6 +12,7 @@ import {
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { art } from "./art";
+import { MotionPressable } from "./Feedback";
 export const palette = {
   gold: "#F0CD83",
   ivory: "#F5E5BC",
@@ -104,7 +105,7 @@ export function Button({
   testID?: string;
 }) {
   return (
-    <Pressable
+    <MotionPressable
       accessibilityRole="button"
       accessibilityLabel={label}
       accessibilityState={{ disabled }}
@@ -117,7 +118,6 @@ export function Button({
         alignItems: "center",
         paddingHorizontal: 18,
         opacity: disabled ? 0.55 : 1,
-        transform: [{ scale: pressed ? 0.98 : 1 }],
       })}
     >
       {({ pressed }) => (
@@ -147,7 +147,7 @@ export function Button({
           </View>
         </>
       )}
-    </Pressable>
+    </MotionPressable>
   );
 }
 export function IconButton({
@@ -160,7 +160,7 @@ export function IconButton({
   onPress: () => void;
 }) {
   return (
-    <Pressable
+    <MotionPressable
       accessibilityRole="button"
       accessibilityLabel={label}
       onPress={onPress}
@@ -180,7 +180,7 @@ export function IconButton({
         resizeMode="stretch"
       />
       <Icon name={name} />
-    </Pressable>
+    </MotionPressable>
   );
 }
 export function Brand({ compact = false }: { compact?: boolean }) {
@@ -203,20 +203,41 @@ export function Brand({ compact = false }: { compact?: boolean }) {
     </View>
   );
 }
-export function Screen({ children }: { children: React.ReactNode }) {
+export function Screen({
+  children,
+  shake,
+}: {
+  children: React.ReactNode;
+  shake?: Animated.ValueXY;
+}) {
   const safe = useSafeAreaInsets();
   return (
-    <ImageBackground source={art.temple} style={{ flex: 1 }} resizeMode="cover">
-      <View
+    <View
+      style={{ flex: 1, backgroundColor: palette.stone, overflow: "hidden" }}
+    >
+      <Animated.View
         style={{
           flex: 1,
-          paddingTop: safe.top,
-          paddingBottom: Math.max(safe.bottom, 8),
+          transform: shake ? shake.getTranslateTransform() : [],
         }}
       >
-        {children}
-      </View>
-    </ImageBackground>
+        <ImageBackground
+          source={art.temple}
+          style={{ flex: 1 }}
+          resizeMode="cover"
+        >
+          <View
+            style={{
+              flex: 1,
+              paddingTop: safe.top,
+              paddingBottom: Math.max(safe.bottom, 8),
+            }}
+          >
+            {children}
+          </View>
+        </ImageBackground>
+      </Animated.View>
+    </View>
   );
 }
 export const row: ViewStyle = {

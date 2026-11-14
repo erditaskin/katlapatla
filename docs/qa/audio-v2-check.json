@@ -1,0 +1,50 @@
+[
+  {
+    "file": "burst.wav",
+    "seconds": 1.12,
+    "peak": 25123,
+    "bytes": 98862
+  },
+  {
+    "file": "ui-click.wav",
+    "seconds": 0.085,
+    "peak": 26026,
+    "bytes": 7576
+  },
+  {
+    "file": "cascade.wav",
+    "seconds": 0.68,
+    "peak": 25430,
+    "bytes": 60054
+  },
+  {
+    "file": "pop-2.wav",
+    "seconds": 0.3,
+    "peak": 25828,
+    "bytes": 26538
+  },
+  {
+    "file": "pop-3.wav",
+    "seconds": 0.42,
+    "peak": 17662,
+    "bytes": 37122
+  },
+  {
+    "file": "temple.wav",
+    "seconds": 3.38,
+    "peak": 6043,
+    "bytes": 298236
+  },
+  {
+    "file": "invalid.wav",
+    "seconds": 0.14,
+    "peak": 25782,
+    "bytes": 12426
+  },
+  {
+    "file": "pop.wav",
+    "seconds": 0.34,
+    "peak": 25994,
+    "bytes": 30066
+  }
+]

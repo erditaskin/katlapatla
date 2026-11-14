@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { AppState, View, useWindowDimensions } from "react-native";
+import { Animated, AppState, View, useWindowDimensions } from "react-native";
 import { router } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useSave } from "../state/store";
@@ -17,6 +17,7 @@ import {
   shuffleGame,
   type Board as BoardData,
   type Outcome,
+  type Goal,
 } from "../game/engine";
 import { Board } from "../ui/Board";
 import {
@@ -30,6 +31,10 @@ import {
 } from "../ui/components";
 import { Header } from "../ui/Header";
 import { CommonDialog, Popup, TextLink } from "../ui/Dialogs";
+import { useFeedback } from "../ui/Feedback";
+import { impactForWave } from "../ui/impact";
+import { ScoreMeter } from "../ui/ScoreMeter";
+import { levels } from "../game/levels";
 import { useWaterAudio } from "../ui/audio";
 export default function GameScreen() {
   const { save, update } = useSave();
@@ -37,6 +42,13 @@ export default function GameScreen() {
   const { width, height } = useWindowDimensions();
   const safe = useSafeAreaInsets();
   const sound = useWaterAudio();
+  const { reducedMotion } = useFeedback();
+  const [shake] = useState(() => new Animated.ValueXY({ x: 0, y: 0 }));
+  const [effectId, setEffectId] = useState(0);
+  const [presentation, setPresentation] = useState<{
+    score: number;
+    goals: Goal[];
+  } | null>(null);
   const [selected, setSelected] = useState<number | null>(null);
   const [display, setDisplay] = useState<BoardData | null>(null);
   const [popping, setPopping] = useState<number[]>([]);
@@ -62,17 +74,47 @@ export default function GameScreen() {
     });
     return () => s.remove();
   }, []);
+  useEffect(() => {
+    if (reducedMotion) {
+      shake.stopAnimation();
+      shake.setValue({ x: 0, y: 0 });
+    }
+    return () => shake.stopAnimation();
+  }, [shake, reducedMotion]);
+  const pause = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
+  const impact = (amplitude: number) => {
+    shake.stopAnimation();
+    shake.setValue({ x: 0, y: 0 });
+    if (reducedMotion) return;
+    Animated.sequence(
+      [1, -0.8, 0.6, -0.45, 0.28, -0.12, 0].map((n, i) =>
+        Animated.timing(shake, {
+          toValue: {
+            x: n * amplitude,
+            y: (i % 2 ? -0.45 : 0.45) * Math.abs(n) * amplitude,
+          },
+          duration: i === 0 ? 22 : 34,
+          useNativeDriver: true,
+        }),
+      ),
+    ).start();
+  };
   const show = async (out: Outcome, used?: Helper) => {
+    if (!game) return;
+    let displayedScore = game.score;
+    let displayedGoals = game.goals.map((g) => ({ ...g }));
     if (!out.valid) {
       sound(0);
       setSelected(null);
       return;
     }
+    setPresentation({ score: displayedScore, goals: displayedGoals });
     busyRef.current = true;
     setBusy(true);
     setSelected(null);
     setHelper(null);
     setTool(null);
+    setDisplay(out.waves[0]?.board ?? out.game.board);
     // Persist the settled outcome before decoration. Suspension cannot replay a reward.
     update((s) => {
       if (s.game?.id !== out.game.id) return s;
@@ -84,27 +126,73 @@ export default function GameScreen() {
         : s;
       return settle(next, out.game, Date.now());
     });
-    for (const wave of out.waves) {
+    if (!used) await pause(reducedMotion ? 0 : 155);
+    for (let i = 0; i < out.waves.length; i++) {
       if (!alive.current) break;
+      const wave = out.waves[i]!;
+      const profile = impactForWave(
+        wave.removed.length,
+        wave.combo,
+        wave.removed.some((n) => !!wave.board[n]!.power),
+      );
+      displayedScore += wave.removed.length * 60 * Math.min(wave.combo, 8);
+      displayedGoals = displayedGoals.map((g) => ({
+        ...g,
+        count: Math.max(
+          0,
+          g.count - wave.colors.filter((c) => c === g.color).length,
+        ),
+      }));
+      setPresentation({ score: displayedScore, goals: displayedGoals });
       setDisplay(wave.board);
       setPopping(wave.removed);
+      setEffectId((v) => v + 1);
       setCombo(wave.combo);
-      sound(wave.combo, wave.removed.length > 7);
-      await new Promise((r) =>
-        setTimeout(r, save.settings.reducedMotion ? 50 : 220),
-      );
+      sound(wave.combo, profile.tier);
+      impact(profile.amplitude);
+      await pause(reducedMotion ? 65 : profile.popMs);
+      if (!alive.current) break;
+      setPopping([]);
+      setDisplay(out.waves[i + 1]?.board ?? out.game.board);
+      await pause(reducedMotion ? 0 : profile.fallMs);
     }
     if (alive.current) {
       setDisplay(null);
       setPopping([]);
       setCombo(0);
       setBusy(false);
+      setPresentation(null);
     }
     busyRef.current = false;
   };
-  const swap = (a: number, b: number) => {
+  const swap = async (a: number, b: number) => {
     if (!game || busyRef.current || dialog || helper || tool) return;
-    void show(move(game, a, b));
+    const out = move(game, a, b);
+    if (out.valid) {
+      void show(out);
+      return;
+    }
+    if (a < 0 || b < 0 || a >= 64 || b >= 64) return;
+    if (!(
+      Math.abs(a - b) === 8 ||
+      (Math.floor(a / 8) === Math.floor(b / 8) && Math.abs(a - b) === 1)
+    ))
+      return;
+    busyRef.current = true;
+    setBusy(true);
+    setSelected(null);
+    const preview = [...game.board];
+    [preview[a], preview[b]] = [preview[b]!, preview[a]!];
+    setDisplay(preview);
+    sound(0);
+    await pause(reducedMotion ? 0 : 150);
+    if (alive.current) setDisplay(game.board);
+    await pause(reducedMotion ? 0 : 180);
+    if (alive.current) {
+      setDisplay(null);
+      setBusy(false);
+    }
+    busyRef.current = false;
   };
   const tap = (i: number) => {
     if (!game || busyRef.current) return;
@@ -136,7 +224,7 @@ export default function GameScreen() {
   };
   if (!game)
     return (
-      <Screen>
+      <Screen shake={shake}>
         <Brand />
         <Label style={{ textAlign: "center", marginTop: 100 }}>
           Kayıtlı bölüm yok.
@@ -168,11 +256,13 @@ export default function GameScreen() {
   const boardWidth = Math.min(width - 24, 500);
   const boardHeight = Math.min(
     boardWidth * 1.15,
-    height - safe.top - Math.max(safe.bottom, 8) - 344,
+    height - safe.top - Math.max(safe.bottom, 8) - 352,
   );
   const paused = dialog !== null || helper !== null;
+  const shownGoals = presentation?.goals ?? game.goals;
+  const shownScore = presentation?.score ?? game.score;
   return (
-    <Screen>
+    <Screen shake={shake}>
       <Header
         onBack={() => setDialog("pause")}
         onSettings={() => setDialog("settings")}
@@ -192,7 +282,7 @@ export default function GameScreen() {
           <View style={row}>
             <Label size={19}>Bölüm {game.level}</Label>
             <View style={{ flexDirection: "row", gap: 9 }}>
-              {game.goals.map((g) => (
+              {shownGoals.map((g) => (
                 <View
                   key={g.color}
                   style={{ flexDirection: "row", alignItems: "center", gap: 3 }}
@@ -217,7 +307,9 @@ export default function GameScreen() {
             height={boardHeight}
             selected={selected}
             popping={popping}
-            reducedMotion={save.settings.reducedMotion}
+            reducedMotion={reducedMotion}
+            effectId={effectId}
+            key={game.id}
             onTap={tap}
             onSwap={swap}
             disabled={busy || paused || game.phase !== "playing"}
@@ -240,28 +332,15 @@ export default function GameScreen() {
             </View>
           )}
         </View>
-        <Panel style={{ width: boardWidth + 4, paddingVertical: 8 }}>
-          <View style={row}>
-            <Label size={19}>Puan {game.score.toLocaleString("tr-TR")}</Label>
-            <View
-              style={{
-                width: "52%",
-                height: 10,
-                borderWidth: 1,
-                borderColor: "#ab8546",
-                backgroundColor: "#141713",
-              }}
-            >
-              <View
-                style={{
-                  height: "100%",
-                  width: `${Math.min(100, game.score / 120)}%`,
-                  backgroundColor: "#06a4ad",
-                }}
-              />
-            </View>
-          </View>
-        </Panel>
+        <ScoreMeter
+          score={shownScore}
+          initial={levels[game.level - 1]!.goals.reduce(
+            (n, g) => n + g.count,
+            0,
+          )}
+          remaining={shownGoals.reduce((n, g) => n + g.count, 0)}
+          width={boardWidth + 4}
+        />
         <View style={[row, { width: boardWidth, gap: 8 }]}>
           {(
             [

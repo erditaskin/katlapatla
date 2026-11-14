@@ -1,8 +1,9 @@
-import React from "react";
-import { Modal, Pressable, ScrollView, Switch, View } from "react-native";
+import React, { useEffect, useState } from "react";
+import { Animated, Modal, ScrollView, Switch, View } from "react-native";
 import { useSave } from "../state/store";
 import { buy, type Settings } from "../state/model";
 import { Button, Icon, IconButton, Label, Panel, row } from "./components";
+import { MotionPressable, useFeedback } from "./Feedback";
 import { LifeTimer } from "./Header";
 export function Popup({
   title,
@@ -13,6 +14,19 @@ export function Popup({
   close?: () => void;
   children: React.ReactNode;
 }) {
+  const { reducedMotion } = useFeedback();
+  const [enter] = useState(() => new Animated.Value(reducedMotion ? 1 : 0));
+  useEffect(() => {
+    const a = Animated.spring(enter, {
+      toValue: 1,
+      stiffness: 290,
+      damping: 24,
+      mass: 0.8,
+      useNativeDriver: true,
+    });
+    a.start();
+    return () => a.stop();
+  }, [enter]);
   return (
     <Modal transparent visible animationType="fade" onRequestClose={close}>
       <View
@@ -23,17 +37,42 @@ export function Popup({
           padding: 22,
         }}
       >
-        <Panel style={{ padding: 22, maxHeight: "90%", gap: 14 }}>
-          <View style={row}>
-            <Label title size={22} style={{ flex: 1, textAlign: "center" }}>
-              {title}
-            </Label>
-            {close && <IconButton name="close" label="Kapat" onPress={close} />}
-          </View>
-          <ScrollView contentContainerStyle={{ gap: 14 }} bounces={false}>
-            {children}
-          </ScrollView>
-        </Panel>
+        <Animated.View
+          style={{
+            maxHeight: "90%",
+            opacity: enter,
+            transform: reducedMotion
+              ? []
+              : [
+                  {
+                    scale: enter.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [0.92, 1],
+                    }),
+                  },
+                  {
+                    translateY: enter.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [18, 0],
+                    }),
+                  },
+                ],
+          }}
+        >
+          <Panel style={{ padding: 22, maxHeight: "100%", gap: 14 }}>
+            <View style={row}>
+              <Label title size={22} style={{ flex: 1, textAlign: "center" }}>
+                {title}
+              </Label>
+              {close && (
+                <IconButton name="close" label="Kapat" onPress={close} />
+              )}
+            </View>
+            <ScrollView contentContainerStyle={{ gap: 14 }} bounces={false}>
+              {children}
+            </ScrollView>
+          </Panel>
+        </Animated.View>
       </View>
     </Modal>
   );
@@ -55,7 +94,7 @@ export function CommonDialog({
       <Popup title="AYARLAR" close={close}>
         {(
           [
-            ["music", "Müzik"],
+            ["music", "Ortam sesi"],
             ["sound", "Ses efektleri"],
             ["haptics", "Titreşim"],
             ["reducedMotion", "Azaltılmış hareket"],
@@ -129,12 +168,12 @@ export function TextLink({
   onPress: () => void;
 }) {
   return (
-    <Pressable
+    <MotionPressable
       accessibilityRole="button"
       onPress={onPress}
       style={{ minHeight: 44, justifyContent: "center", alignItems: "center" }}
     >
       <Label size={17}>{label}</Label>
-    </Pressable>
+    </MotionPressable>
   );
 }

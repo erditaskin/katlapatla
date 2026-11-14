@@ -1,18 +1,12 @@
-"""Original deterministic water-like synthesis; no sampled third-party audio."""
-import wave,struct,math,random
+"""Prepare CC0 water recordings by rubberduck. No synthetic beep or tone layers."""
 from pathlib import Path
-out=Path(__file__).resolve().parents[1]/'assets/audio';out.mkdir(exist_ok=True)
-rate=24000
-for name,duration,pitch in [('pop',.22,380),('cascade',.38,520),('burst',.6,240),('invalid',.1,180)]:
- rng=random.Random(71);data=[];last=0
- for i in range(int(rate*duration)):
-  t=i/rate;u=t/duration;env=(1-u)**2*min(1,t*180);last=.68*last+.32*rng.uniform(-1,1)
-  bubble=math.sin(2*math.pi*(pitch*t+190*t*t))*math.exp(-t*15)
-  droplets=math.sin(2*math.pi*(950*t-350*t*t))*math.exp(-t*8)
-  val=(.43*last+.3*bubble+.14*droplets)*env;data.append(int(max(-.9,min(.9,val))*32767))
- with wave.open(str(out/(name+'.wav')),'wb') as w:w.setnchannels(1);w.setsampwidth(2);w.setframerate(rate);w.writeframes(struct.pack('<'+'h'*len(data),*data))
-# Quiet loop with pentatonic tones and tapered notes; no bass spikes or clipped samples.
-data=[];notes=[220,261.63,293.66,329.63,392,329.63,293.66,261.63]
-for i in range(rate*16):
- t=i/rate;note=notes[int(t/2)%8];a=t%2;env=math.sin(math.pi*a/2)**2;value=.08*math.sin(2*math.pi*note*t)*env+.025*math.sin(2*math.pi*note*1.5*t)*env;data.append(int(value*32767))
-with wave.open(str(out/'temple.wav'),'wb') as w:w.setnchannels(1);w.setsampwidth(2);w.setframerate(rate);w.writeframes(struct.pack('<'+'h'*len(data),*data))
+import subprocess,json,hashlib
+root=Path(__file__).resolve().parents[1];out=root/'assets/audio';src=out/'source'
+clips=[('pop','splash_09',.34,-21),('pop-2','splash_10',.30,-21),('pop-3','splash_06',.42,-21),('cascade','splash_03',.68,-20),('burst','splash_01',1.12,-19),('ui-click','bubble_02',.085,-25),('invalid','bubble_03',.14,-25)]
+records=[]
+for name,source,duration,lufs in clips:
+ filters=f'silenceremove=start_periods=1:start_threshold=-45dB,atrim=duration={duration},afade=t=in:d=0.004,afade=t=out:st={duration-.045}:d=0.045,loudnorm=I={lufs}:TP=-2:LRA=7'
+ subprocess.run(['ffmpeg','-v','error','-y','-i',str(src/(source+'.ogg')),'-af',filters,'-ar','44100','-ac','1','-c:a','pcm_s16le',str(out/(name+'.wav'))],check=True)
+ records.append({'file':name+'.wav','source':source+'.ogg','duration':duration,'targetLUFS':lufs,'sha256':hashlib.sha256((out/(name+'.wav')).read_bytes()).hexdigest()})
+subprocess.run(['ffmpeg','-v','error','-y','-i',str(src/'loop_water_01.ogg'),'-af','lowpass=f=1800,loudnorm=I=-32:TP=-8:LRA=5','-ar','44100','-ac','1','-c:a','pcm_s16le',str(out/'temple.wav')],check=True)
+(out/'manifest.json').write_text(json.dumps({'author':'rubberduck','license':'CC0 1.0','source':'https://opengameart.org/content/40-cc0-water-splash-slime-sfx','clips':records},indent=2)+'\n')

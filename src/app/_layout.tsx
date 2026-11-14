@@ -3,6 +3,7 @@ import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
 import { StatusBar } from "expo-status-bar";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { FeedbackProvider } from "../ui/Feedback";
 import { SaveProvider, useSave } from "../state/store";
 import { Button, Label, Screen } from "../ui/components";
 function Routes() {
@@ -39,7 +40,9 @@ export default function Root() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <StatusBar hidden />
       <SaveProvider>
-        <Routes />
+        <FeedbackProvider>
+          <Routes />
+        </FeedbackProvider>
       </SaveProvider>
     </GestureHandlerRootView>
   );
