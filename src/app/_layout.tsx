@@ -6,6 +6,18 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { FeedbackProvider } from "../ui/Feedback";
 import { SaveProvider, useSave } from "../state/store";
 import { Button, Label, Screen } from "../ui/components";
+const Navigation = React.memo(function Navigation() {
+  return (
+    <Stack
+      screenOptions={{
+        headerShown: false,
+        contentStyle: { backgroundColor: "#191916" },
+        animation: "fade",
+        statusBarHidden: true,
+      }}
+    />
+  );
+});
 function Routes() {
   const { ready, error, retry } = useSave();
   if (!ready)
@@ -19,14 +31,7 @@ function Routes() {
     );
   return (
     <>
-      <Stack
-        screenOptions={{
-          headerShown: false,
-          contentStyle: { backgroundColor: "#191916" },
-          animation: "fade",
-          statusBarHidden: true,
-        }}
-      />
+      <Navigation />
       {error && <Button label={error} onPress={retry} />}
     </>
   );

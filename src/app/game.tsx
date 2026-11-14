@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Animated, AppState, View, useWindowDimensions } from "react-native";
 import { router } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -12,6 +12,7 @@ import {
 } from "../state/model";
 import {
   addHeart,
+  adjacent,
   move,
   needle,
   shuffleGame,
@@ -32,7 +33,10 @@ import {
 import { Header } from "../ui/Header";
 import { CommonDialog, Popup, TextLink } from "../ui/Dialogs";
 import { MotionPressable, useFeedback } from "../ui/Feedback";
-import { impactForWave } from "../ui/impact";
+import type { CoachTopic } from "../ui/coachRules";
+import { Coach, type HelperUsage } from "../ui/Coach";
+import { Celebration } from "../ui/Celebration";
+import { celebrationForWave, impactForWave } from "../ui/impact";
 import { ScoreMeter } from "../ui/ScoreMeter";
 import { levels } from "../game/levels";
 import { useWaterAudio } from "../ui/audio";
@@ -52,9 +56,22 @@ export default function GameScreen() {
   const [selected, setSelected] = useState<number | null>(null);
   const [display, setDisplay] = useState<BoardData | null>(null);
   const [popping, setPopping] = useState<number[]>([]);
-  const [combo, setCombo] = useState(0);
   const [busy, setBusy] = useState(false);
   const busyRef = useRef(false);
+  const sequence = useRef(0);
+  const [highlighted, setHighlighted] = useState<CoachTopic | null>(null);
+  const [usedHelpers, setUsedHelpers] = useState<HelperUsage>({});
+  const [celebration, setCelebration] = useState<{
+    title: string;
+    combo: number;
+    points: number;
+    id: string;
+  } | null>(null);
+  useEffect(() => {
+    if (!celebration) return;
+    const timer = setTimeout(() => setCelebration(null), 750);
+    return () => clearTimeout(timer);
+  }, [celebration]);
   const alive = useRef(true);
   const [dialog, setDialog] = useState<
     "pause" | "exit" | "tutorial" | "settings" | "lives" | "unavailable" | null
@@ -70,7 +87,16 @@ export default function GameScreen() {
   }, []);
   useEffect(() => {
     const s = AppState.addEventListener("change", (state) => {
-      if (state !== "active") setSelected(null);
+      if (state !== "active") {
+        sequence.current++;
+        busyRef.current = false;
+        setSelected(null);
+        setBusy(false);
+        setDisplay(null);
+        setPopping([]);
+        setCelebration(null);
+        setPresentation(null);
+      }
     });
     return () => s.remove();
   }, []);
@@ -108,6 +134,7 @@ export default function GameScreen() {
       setSelected(null);
       return;
     }
+    const token = ++sequence.current;
     setPresentation({ score: displayedScore, goals: displayedGoals });
     busyRef.current = true;
     setBusy(true);
@@ -115,55 +142,76 @@ export default function GameScreen() {
     setHelper(null);
     setTool(null);
     setDisplay(out.waves[0]?.board ?? out.game.board);
-    // Persist the settled outcome before decoration. Suspension cannot replay a reward.
-    update((s) => {
-      if (s.game?.id !== out.game.id) return s;
-      const next = used
-        ? {
-            ...s,
-            helpers: { ...s.helpers, [used]: Math.max(0, s.helpers[used] - 1) },
-          }
-        : s;
-      return settle(next, out.game, Date.now());
-    });
-    if (!used) await pause(reducedMotion ? 0 : 155);
-    for (let i = 0; i < out.waves.length; i++) {
-      if (!alive.current) break;
-      const wave = out.waves[i]!;
-      const profile = impactForWave(
-        wave.removed.length,
-        wave.combo,
-        wave.removed.some((n) => !!wave.board[n]!.power),
-      );
-      displayedScore += wave.removed.length * 60 * Math.min(wave.combo, 8);
-      displayedGoals = displayedGoals.map((g) => ({
-        ...g,
-        count: Math.max(
-          0,
-          g.count - wave.colors.filter((c) => c === g.color).length,
-        ),
-      }));
-      setPresentation({ score: displayedScore, goals: displayedGoals });
-      setDisplay(wave.board);
-      setPopping(wave.removed);
-      setEffectId((v) => v + 1);
-      setCombo(wave.combo);
-      sound(wave.combo, profile.tier);
-      impact(profile.amplitude);
-      await pause(reducedMotion ? 65 : profile.popMs);
-      if (!alive.current) break;
-      setPopping([]);
-      setDisplay(out.waves[i + 1]?.board ?? out.game.board);
-      await pause(reducedMotion ? 0 : profile.fallMs);
+    try {
+      // Persist the settled outcome before decoration. Suspension cannot replay a reward.
+      update((s) => {
+        if (s.game?.id !== out.game.id) return s;
+        const next = used
+          ? {
+              ...s,
+              helpers: {
+                ...s.helpers,
+                [used]: Math.max(0, s.helpers[used] - 1),
+              },
+            }
+          : s;
+        return settle(next, out.game, Date.now());
+      });
+      if (used) setUsedHelpers((v) => ({ ...v, [used]: true }));
+      if (!used) await pause(reducedMotion ? 0 : 155);
+      for (let i = 0; i < out.waves.length; i++) {
+        if (!alive.current || token !== sequence.current) break;
+        const wave = out.waves[i]!;
+        const profile = impactForWave(
+          wave.removed.length,
+          wave.combo,
+          wave.removed.some((n) => !!wave.board[n]!.power),
+        );
+        const points = wave.removed.length * 60 * Math.min(wave.combo, 8);
+        const title = celebrationForWave(
+          wave.removed.length,
+          wave.combo,
+          profile.tier === "large",
+          points,
+        );
+        if (title)
+          setCelebration({
+            title,
+            combo: wave.combo,
+            points,
+            id: `${out.game.id}:${out.game.moves}:${i}`,
+          });
+        displayedScore += points;
+        displayedGoals = displayedGoals.map((g) => ({
+          ...g,
+          count: Math.max(
+            0,
+            g.count - wave.colors.filter((c) => c === g.color).length,
+          ),
+        }));
+        setPresentation({ score: displayedScore, goals: displayedGoals });
+        setDisplay(wave.board);
+        setPopping(wave.removed);
+        setEffectId((v) => v + 1);
+        sound(wave.combo, profile.tier);
+        impact(profile.amplitude);
+        await pause(reducedMotion ? 65 : profile.popMs);
+        if (!alive.current || token !== sequence.current) break;
+        setPopping([]);
+        setDisplay(out.waves[i + 1]?.board ?? out.game.board);
+        await pause(reducedMotion ? 0 : profile.fallMs);
+      }
+    } catch (error) {
+      console.warn("Board presentation interrupted", error);
+    } finally {
+      if (alive.current && token === sequence.current) {
+        setDisplay(null);
+        setPopping([]);
+        setBusy(false);
+        setPresentation(null);
+      }
+      if (token === sequence.current) busyRef.current = false;
     }
-    if (alive.current) {
-      setDisplay(null);
-      setPopping([]);
-      setCombo(0);
-      setBusy(false);
-      setPresentation(null);
-    }
-    busyRef.current = false;
   };
   const swap = async (a: number, b: number) => {
     if (!game || busyRef.current || dialog || helper || tool) return;
@@ -172,12 +220,8 @@ export default function GameScreen() {
       void show(out);
       return;
     }
-    if (a < 0 || b < 0 || a >= 64 || b >= 64) return;
-    if (!(
-      Math.abs(a - b) === 8 ||
-      (Math.floor(a / 8) === Math.floor(b / 8) && Math.abs(a - b) === 1)
-    ))
-      return;
+    if (!adjacent(a, b)) return;
+    const token = ++sequence.current;
     busyRef.current = true;
     setBusy(true);
     setSelected(null);
@@ -186,13 +230,13 @@ export default function GameScreen() {
     setDisplay(preview);
     sound(0);
     await pause(reducedMotion ? 0 : 150);
-    if (alive.current) setDisplay(game.board);
+    if (alive.current && token === sequence.current) setDisplay(game.board);
     await pause(reducedMotion ? 0 : 180);
-    if (alive.current) {
+    if (alive.current && token === sequence.current) {
       setDisplay(null);
       setBusy(false);
     }
-    busyRef.current = false;
+    if (token === sequence.current) busyRef.current = false;
   };
   const tap = (i: number) => {
     if (!game || busyRef.current) return;
@@ -203,6 +247,7 @@ export default function GameScreen() {
     if (tool === "heart") {
       const next = addHeart(game, i);
       if (next !== game) {
+        setUsedHelpers((v) => ({ ...v, heart: true }));
         update((s) => ({
           ...s,
           game: next,
@@ -218,7 +263,7 @@ export default function GameScreen() {
     else {
       const a = selected;
       setSelected(null);
-      if (Math.abs(a - i) === 1 || Math.abs(a - i) === 8) swap(a, i);
+      if (adjacent(a, i)) swap(a, i);
       else setSelected(i);
     }
   };
@@ -258,7 +303,7 @@ export default function GameScreen() {
     boardWidth * 1.15,
     height - safe.top - Math.max(safe.bottom, 8) - 352,
   );
-  const paused = dialog !== null || helper !== null;
+  const paused = dialog !== null || helper !== null || hint !== "";
   const shownGoals = presentation?.goals ?? game.goals;
   const shownScore = presentation?.score ?? game.score;
   return (
@@ -267,6 +312,9 @@ export default function GameScreen() {
         onBack={() => setDialog("pause")}
         onSettings={() => setDialog("settings")}
         onLives={() => setDialog("lives")}
+        highlighted={
+          highlighted === "lives" || highlighted === "gold" ? highlighted : null
+        }
       />
       <Brand />
       <View
@@ -314,21 +362,36 @@ export default function GameScreen() {
             onSwap={swap}
             disabled={busy || paused || game.phase !== "playing"}
           />
-          {combo > 1 && (
+          {celebration && (
+            <Celebration
+              key={celebration.id}
+              title={celebration.title}
+              combo={celebration.combo}
+              points={celebration.points}
+            />
+          )}
+          {busy && (
             <View
               pointerEvents="none"
               style={{
                 position: "absolute",
-                top: "40%",
-                width: "100%",
+                bottom: 6,
+                left: 0,
+                right: 0,
                 alignItems: "center",
               }}
             >
-              <Panel>
-                <Label title size={29}>
-                  ×{combo} KOMBO
-                </Label>
-              </Panel>
+              <Label
+                size={12}
+                style={{
+                  backgroundColor: "#0c100ee8",
+                  paddingHorizontal: 10,
+                  paddingVertical: 3,
+                  borderRadius: 8,
+                }}
+              >
+                Balonlar yerleşiyor…
+              </Label>
             </View>
           )}
         </View>
@@ -355,6 +418,7 @@ export default function GameScreen() {
               accessibilityRole="button"
               accessibilityLabel={`${label}, ${save.helpers[key]} adet`}
               testID={`helper-${key}`}
+              highlighted={highlighted === key}
               disabled={busy || paused || game.phase !== "playing"}
               onPress={() => {
                 if (save.helpers[key] < 1) {
@@ -381,6 +445,11 @@ export default function GameScreen() {
           ))}
         </View>
       </View>
+      <Coach
+        blocked={busy || paused || game.phase !== "playing" || tool !== null}
+        used={usedHelpers}
+        onTopic={setHighlighted}
+      />
       {hint !== "" && (
         <Popup title="YARDIMCILAR" close={() => setHint("")}>
           <Label>{hint}</Label>
@@ -403,6 +472,7 @@ export default function GameScreen() {
             label="Kullan"
             onPress={() => {
               if (helper === "shuffle") {
+                setUsedHelpers((v) => ({ ...v, shuffle: true }));
                 const next = shuffleGame(game);
                 if (next !== game)
                   update((s) => ({

@@ -70,15 +70,15 @@ export function SaveProvider({ children }: { children: React.ReactNode }) {
         if (s !== current.current) update(() => s);
       }
     };
-    const timer = setInterval(tick, 1000);
+    const timer = ready && save.lives < 5 ? setInterval(tick, 1000) : null;
     const subscription = AppState.addEventListener("change", (state) => {
       if (state === "active") tick();
     });
     return () => {
-      clearInterval(timer);
+      if (timer) clearInterval(timer);
       subscription.remove();
     };
-  }, [ready, update]);
+  }, [ready, update, save.lives]);
   const retry = useCallback(() => {
     if (ready) persist(current.current);
     else

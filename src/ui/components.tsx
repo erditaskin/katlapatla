@@ -112,13 +112,13 @@ export function Button({
       testID={testID}
       disabled={disabled}
       onPress={onPress}
-      style={({ pressed }) => ({
+      style={{
         minHeight: small ? 46 : 56,
         justifyContent: "center",
         alignItems: "center",
         paddingHorizontal: 18,
         opacity: disabled ? 0.55 : 1,
-      })}
+      }}
     >
       {({ pressed }) => (
         <>

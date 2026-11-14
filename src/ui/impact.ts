@@ -8,10 +8,9 @@ export function impactForWave(count: number, combo: number, special: boolean) {
         : "small";
   return {
     tier,
-    amplitude: tier === "large" ? 14 : tier === "medium" ? 6 : 1.8,
+    amplitude: tier === "large" ? 18 : tier === "medium" ? 9 : 3.5,
     popMs: 410,
     fallMs: 230,
-    emitters: Math.min(count, 14),
   } as const;
 }
 export function goalProgress(initial: number, remaining: number) {
@@ -26,4 +25,16 @@ export function spreadEmitters(indices: number[], max = 14) {
         { length: max },
         (_, i) => indices[Math.floor((i * indices.length) / max)]!,
       );
+}
+
+export function celebrationForWave(
+  count: number,
+  combo: number,
+  special: boolean,
+  points: number,
+) {
+  if (combo >= 3 || points >= 1500 || count >= 16) return "KATLA PATLA!";
+  if (special || count >= 8) return "KATLA PATLA!";
+  if (combo >= 2) return `KATLA +${combo}`;
+  return null;
 }

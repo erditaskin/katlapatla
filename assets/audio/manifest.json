@@ -6,60 +6,72 @@
     {
       "file": "pop.wav",
       "source": "splash_09.ogg",
-      "duration": 0.34,
-      "targetLUFS": -21,
-      "sha256": "14acd70ea3476c495bdce981a006f3d35e0205836dfaa3ff5370b028e619612e"
+      "waterTransientLayer": true,
+      "duration": 0.46,
+      "targetLUFS": -19,
+      "sha256": "d97f4371543b7a7744d24a7fed64cecbde598f0043b03a185f3e1d2417803b7b"
     },
     {
       "file": "pop-2.wav",
       "source": "splash_10.ogg",
-      "duration": 0.3,
-      "targetLUFS": -21,
-      "sha256": "56a64f1f941d69a47fce01a78789e26cd99dada2ebcf149542c10a567a501e8b"
+      "waterTransientLayer": true,
+      "duration": 0.42,
+      "targetLUFS": -19,
+      "sha256": "edaf9281120e76203e67c28e1129dce1ffc143f5730979abae6087191398edab"
     },
     {
       "file": "pop-3.wav",
       "source": "splash_06.ogg",
-      "duration": 0.42,
-      "targetLUFS": -21,
-      "sha256": "5cf739bf8a22a94b9955a5acbd70e1bbdb0d17d129ad9c014e69fbe9f7e83f93"
+      "waterTransientLayer": true,
+      "duration": 0.5,
+      "targetLUFS": -19,
+      "sha256": "142f5f8a957086e9a1cf4df400b87e38c8990fa53fae8b35c6c52d90c9e6b5e2"
     },
     {
       "file": "cascade.wav",
       "source": "splash_03.ogg",
-      "duration": 0.68,
-      "targetLUFS": -20,
-      "sha256": "8c322a54a45ed43899a43d8c8551631ce3b955da07f288d882dddc02e7604a87"
+      "waterTransientLayer": true,
+      "duration": 0.82,
+      "targetLUFS": -18,
+      "sha256": "22e86cfc0369dcf6f67039e9a538cc9088f20a27dda801efa3ef04db432bb582"
     },
     {
       "file": "burst.wav",
       "source": "splash_01.ogg",
-      "duration": 1.12,
-      "targetLUFS": -19,
-      "sha256": "79235d378402fd9fb2abcf8045191485a1a8b006a604530bc8bc65ac0982e5ae"
+      "waterTransientLayer": true,
+      "duration": 1.25,
+      "targetLUFS": -17,
+      "sha256": "58daff181d046e16690fd6456e3049ef1c285419100d14e10632ba70a70ff9a5"
     },
     {
       "file": "ui-click.wav",
       "source": "bubble_02.ogg",
+      "waterTransientLayer": false,
       "duration": 0.085,
       "targetLUFS": -25,
-      "sha256": "3c3683205595f2a79dcf1ba1c4edbf1da4bdd9c9f27d3ad6c7dcd3233b2b940a"
+      "sha256": "4c0a8919150ef923f07e734ca3ddf90f5079e3f3abe5cac8a744d04aed4f1bda"
     },
     {
       "file": "invalid.wav",
       "source": "bubble_03.ogg",
+      "waterTransientLayer": false,
       "duration": 0.14,
       "targetLUFS": -25,
-      "sha256": "2f8cdff2128fc3e81bc1a28852bc44011ab9c53bdb857440b9c67443b583d0f1"
+      "sha256": "328cdcdd13362db419d5c78cea5acb23989b7df639325e8054e758e692f8138c"
     }
   ],
   "music": {
     "file": "desert-mystic.m4a",
-    "source": "source/desert-mystic.mp3",
     "author": "PolygonDan",
     "license": "CC0 1.0",
     "page": "https://opengameart.org/content/desertmystic-dynastic-egyptian-theme-cc0",
-    "targetLUFS": -22,
     "sha256": "76abc8ec030875b95d9c085cfba689e3aed886334253ce1284c74ce83c56be75"
+  },
+  "cat": {
+    "file": "cat-meow.wav",
+    "author": "Joseph SARDIN",
+    "license": "CC0 1.0",
+    "page": "https://bigsoundbank.com/meow-cat-6-s1894.html",
+    "sha256": "507c64f893227fb9a1f0c32cc3ad4b8ac8b76e34e490728becccedcc47fdd30c"
   }
 }

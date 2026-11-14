@@ -3,11 +3,11 @@ import assert from "node:assert/strict";
 import { impactForWave, goalProgress, spreadEmitters } from "../src/ui/impact";
 test("ordinary matches remain gentle; special and large cascades have bounded impact", () => {
   assert.equal(impactForWave(3, 1, false).tier, "small");
-  assert.ok(impactForWave(3, 1, false).amplitude <= 2);
+  assert.ok(impactForWave(3, 1, false).amplitude <= 4);
   assert.equal(impactForWave(3, 1, true).tier, "large");
   assert.equal(impactForWave(12, 1, false).tier, "large");
   assert.equal(impactForWave(3, 4, false).tier, "large");
-  assert.ok(impactForWave(64, 100, true).amplitude <= 14);
+  assert.ok(impactForWave(64, 100, true).amplitude <= 18);
 });
 test("particle budget samples whole board without duplicate emitters", () => {
   const all = Array.from({ length: 64 }, (_, i) => i);

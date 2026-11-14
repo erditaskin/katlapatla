@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { Animated, Easing, View } from "react-native";
 import { COLORS, type Color } from "../game/engine";
 import { art } from "./art";

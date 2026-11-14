@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ScrollView, View } from "react-native";
 import { router } from "expo-router";
 import { useSave } from "../state/store";

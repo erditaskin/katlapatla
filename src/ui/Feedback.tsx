@@ -107,11 +107,15 @@ export function useFeedback() {
 }
 export function MotionPressable({
   wrapperStyle,
+  highlighted = false,
   onPress,
   onPressIn,
   onPressOut,
   ...props
-}: PressableProps & { wrapperStyle?: StyleProp<ViewStyle> }) {
+}: PressableProps & {
+  wrapperStyle?: StyleProp<ViewStyle>;
+  highlighted?: boolean;
+}) {
   const { reducedMotion, press } = useFeedback();
   const [scale] = useState(() => new Animated.Value(1));
   const animate = (value: number) => {
@@ -126,6 +130,32 @@ export function MotionPressable({
         useNativeDriver: true,
       }).start();
   };
+  useEffect(() => {
+    if (!highlighted || reducedMotion) {
+      scale.setValue(1);
+      return;
+    }
+    const animation = Animated.loop(
+      Animated.sequence([
+        Animated.timing(scale, {
+          toValue: 1.08,
+          duration: 420,
+          useNativeDriver: true,
+        }),
+        Animated.timing(scale, {
+          toValue: 1,
+          duration: 420,
+          useNativeDriver: true,
+        }),
+      ]),
+      { iterations: 3 },
+    );
+    animation.start();
+    return () => {
+      animation.stop();
+      scale.setValue(1);
+    };
+  }, [highlighted, reducedMotion, scale]);
   useEffect(() => () => scale.stopAnimation(), [scale]);
   return (
     <Animated.View style={[wrapperStyle, { transform: [{ scale }] }]}>

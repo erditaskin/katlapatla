@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Animated, StyleSheet, View } from "react-native";
 import { Label, Panel, row } from "./components";
 import { goalProgress } from "./impact";

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { View } from "react-native";
 import { router } from "expo-router";
 import { useSave } from "../state/store";
@@ -9,10 +9,12 @@ export function Header({
   onBack,
   onSettings,
   onLives,
+  highlighted,
 }: {
   onBack: () => void;
   onSettings: () => void;
   onLives: () => void;
+  highlighted?: "lives" | "gold" | null;
 }) {
   const { save } = useSave();
   return (
@@ -21,6 +23,7 @@ export function Header({
       <MotionPressable
         accessibilityRole="button"
         accessibilityLabel={`Can ${save.lives}/5, can al`}
+        highlighted={highlighted === "lives"}
         onPress={onLives}
         wrapperStyle={{ flex: 1 }}
         style={{ minHeight: 44, justifyContent: "center" }}
@@ -36,6 +39,7 @@ export function Header({
       <MotionPressable
         accessibilityRole="button"
         accessibilityLabel={`Altın ${save.gold}, mağaza`}
+        highlighted={highlighted === "gold"}
         onPress={() => router.push("/store")}
         wrapperStyle={{ flex: 1.15 }}
         style={{ minHeight: 44, justifyContent: "center" }}
@@ -57,9 +61,10 @@ export function LifeTimer() {
   const { save } = useSave();
   const [now, setNow] = useState(() => Date.now());
   useEffect(() => {
+    if (save.lives >= 5) return;
     const t = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(t);
-  }, []);
+  }, [save.lives]);
   const seconds = Math.max(0, Math.ceil((save.lifeAt + LIFE_MS - now) / 1000));
   return (
     <Label size={16}>

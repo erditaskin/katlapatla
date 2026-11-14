@@ -1,4 +1,11 @@
-import React, { memo, useEffect, useRef, useState } from "react";
+import {
+  memo,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import {
   Animated,
   Easing,
@@ -6,11 +13,11 @@ import {
   Pressable,
   StyleSheet,
   View,
-  type GestureResponderEvent,
 } from "react-native";
 import type { Board as BoardData, Tile } from "../game/engine";
 import { art, colorNames } from "./art";
 import { WaterBurst } from "./WaterBurst";
+import { swipeTarget } from "./boardInput";
 import { spreadEmitters } from "./impact";
 const Balloon = memo(function Balloon({
   tile,
@@ -21,9 +28,6 @@ const Balloon = memo(function Balloon({
   reducedMotion,
   selected,
   entering,
-  disabled,
-  onPress,
-  onTouchStart,
 }: {
   tile: Tile;
   index: number;
@@ -33,9 +37,6 @@ const Balloon = memo(function Balloon({
   reducedMotion: boolean;
   selected: boolean;
   entering: boolean;
-  disabled: boolean;
-  onPress: () => void;
-  onTouchStart: (e: GestureResponderEvent) => void;
 }) {
   const x = (index % 8) * width,
     y = Math.floor(index / 8) * height;
@@ -131,25 +132,9 @@ const Balloon = memo(function Balloon({
     a.start();
     return () => a.stop();
   }, [popping, selected, reducedMotion, sx, sy, opacity]);
-  const press = (down: boolean) => {
-    if (reducedMotion || popping) return;
-    Animated.parallel([
-      Animated.spring(sx, {
-        toValue: down ? 0.94 : selected ? 1.07 : 1,
-        stiffness: 450,
-        damping: 22,
-        useNativeDriver: true,
-      }),
-      Animated.spring(sy, {
-        toValue: down ? 1.04 : selected ? 1.07 : 1,
-        stiffness: 450,
-        damping: 22,
-        useNativeDriver: true,
-      }),
-    ]).start();
-  };
   return (
     <Animated.View
+      pointerEvents="none"
       style={{
         position: "absolute",
         left: 0,
@@ -160,16 +145,7 @@ const Balloon = memo(function Balloon({
         zIndex: selected ? 2 : 1,
       }}
     >
-      <Pressable
-        accessibilityRole="button"
-        accessibilityLabel={`${Math.floor(index / 8) + 1}. satır ${(index % 8) + 1}. sütun, ${colorNames[tile.color]}${tile.power ? ", özel balon" : ""}`}
-        accessibilityState={{ selected }}
-        testID={`cell-${index}`}
-        disabled={disabled}
-        onPress={onPress}
-        onPressIn={() => press(true)}
-        onPressOut={() => press(false)}
-        onTouchStart={onTouchStart}
+      <View
         style={{
           width,
           height,
@@ -197,8 +173,73 @@ const Balloon = memo(function Balloon({
             resizeMode="stretch"
           />
         )}
-      </Pressable>
+      </View>
     </Animated.View>
+  );
+});
+const InputCell = memo(function InputCell({
+  index,
+  color,
+  special,
+  selected,
+  disabled,
+  width,
+  height,
+  onTap,
+  onSwap,
+}: {
+  index: number;
+  color: Tile["color"];
+  special: boolean;
+  selected: boolean;
+  disabled: boolean;
+  width: number;
+  height: number;
+  onTap: (i: number) => void;
+  onSwap: (a: number, b: number) => void;
+}) {
+  const start = useRef<{ x: number; y: number } | null>(null);
+  const swiped = useRef(false);
+  return (
+    <Pressable
+      testID={`cell-${index}`}
+      accessibilityRole="button"
+      accessibilityLabel={`${Math.floor(index / 8) + 1}. satır ${(index % 8) + 1}. sütun, ${colorNames[color]}${special ? ", özel balon" : ""}`}
+      accessibilityState={{ selected, disabled }}
+      disabled={disabled}
+      style={{
+        position: "absolute",
+        left: (index % 8) * width,
+        top: Math.floor(index / 8) * height,
+        width,
+        height,
+      }}
+      onTouchStart={(e) => {
+        swiped.current = false;
+        start.current = { x: e.nativeEvent.pageX, y: e.nativeEvent.pageY };
+      }}
+      onTouchCancel={() => {
+        start.current = null;
+        swiped.current = false;
+      }}
+      onTouchEnd={(e) => {
+        const origin = start.current;
+        start.current = null;
+        if (!origin || disabled) return;
+        const target = swipeTarget(
+          index,
+          e.nativeEvent.pageX - origin.x,
+          e.nativeEvent.pageY - origin.y,
+        );
+        if (target !== null) {
+          swiped.current = true;
+          onSwap(index, target);
+        }
+      }}
+      onPress={() => {
+        if (!disabled && !swiped.current) onTap(index);
+      }}
+    />
   );
 });
 export function Board({
@@ -224,8 +265,18 @@ export function Board({
   disabled: boolean;
   effectId?: number;
 }) {
-  const touch = useRef<{ x: number; y: number; index: number } | null>(null);
-  const swiped = useRef(false);
+  const callbacks = useRef({ onTap, onSwap });
+  useLayoutEffect(() => {
+    callbacks.current = { onTap, onSwap };
+  }, [onTap, onSwap]);
+  const tap = useCallback(
+    (index: number) => callbacks.current.onTap(index),
+    [],
+  );
+  const swap = useCallback(
+    (a: number, b: number) => callbacks.current.onSwap(a, b),
+    [],
+  );
   const [initialIds] = useState(() => new Set(board.map((t) => t.id)));
   const w = width / 8,
     h = height / 8;
@@ -233,18 +284,6 @@ export function Board({
     <View
       accessibilityLabel="8 satır 8 sütun balon tahtası"
       style={{ width: width + 4, height: height + 4 }}
-      onTouchEnd={(e) => {
-        const t = touch.current;
-        if (!t || disabled) return;
-        const dx = e.nativeEvent.pageX - t.x,
-          dy = e.nativeEvent.pageY - t.y;
-        if (Math.max(Math.abs(dx), Math.abs(dy)) < 14) return;
-        const b =
-          t.index +
-          (Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? 1 : -1) : dy > 0 ? 8 : -8);
-        swiped.current = true;
-        onSwap(t.index, b);
-      }}
     >
       <View
         style={{
@@ -282,18 +321,25 @@ export function Board({
             reducedMotion={reducedMotion}
             selected={selected === i}
             entering={!initialIds.has(tile.id)}
+          />
+        ))}
+      </View>
+      <View
+        style={{ position: "absolute", left: 2, top: 2, width, height }}
+        pointerEvents={disabled ? "none" : "auto"}
+      >
+        {board.map((tile, i) => (
+          <InputCell
+            key={i}
+            index={i}
+            color={tile.color}
+            special={!!tile.power}
+            selected={selected === i}
             disabled={disabled}
-            onTouchStart={(e) => {
-              swiped.current = false;
-              touch.current = {
-                x: e.nativeEvent.pageX,
-                y: e.nativeEvent.pageY,
-                index: i,
-              };
-            }}
-            onPress={() => {
-              if (!disabled && !swiped.current) onTap(i);
-            }}
+            width={w}
+            height={h}
+            onTap={tap}
+            onSwap={swap}
           />
         ))}
       </View>
