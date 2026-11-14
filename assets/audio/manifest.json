@@ -52,5 +52,14 @@
       "targetLUFS": -25,
       "sha256": "2f8cdff2128fc3e81bc1a28852bc44011ab9c53bdb857440b9c67443b583d0f1"
     }
-  ]
+  ],
+  "music": {
+    "file": "desert-mystic.m4a",
+    "source": "source/desert-mystic.mp3",
+    "author": "PolygonDan",
+    "license": "CC0 1.0",
+    "page": "https://opengameart.org/content/desertmystic-dynastic-egyptian-theme-cc0",
+    "targetLUFS": -22,
+    "sha256": "76abc8ec030875b95d9c085cfba689e3aed886334253ce1284c74ce83c56be75"
+  }
 }

@@ -32,3 +32,20 @@ The simulator does not establish subjective audio quality or hardware haptic fee
 - No physical phone test was performed. Existing native Release binary was rebundled with Expo's iOS bytecode export, signed and reinstalled; no native dependency changed.
 
 The iPhone 17 Pro remains open on level 2 for review. Audio playback success is exercised by the app, but no loopback recording or subjective listening certification is claimed.
+
+## Follow-up correction after user review
+
+The prior checks did not establish usability across the whole visible helper card. Coordinate testing reproduced the defect: tapping the needle illustration did nothing because only its text was a Pressable. Each full card is now one accessible animated button, with decorative children excluded from touch handling. Header, modal actions and helper icon areas must be checked with screen coordinates rather than relying only on accessibility activation.
+
+The background image remains unchanged at the user's explicit request. The rejected water ambience is removed. PolygonDan's CC0 “Desert Mystic” now plays from one app-level player, continues across screens and pauses in background. The setting is named “Müzik”.
+
+The old 5.5-point maximum shake was too subtle. Impact amplitudes are now 1.8 / 6 / 14 points, with a 306 ms decaying sequence. Reduced motion still disables displacement. These are tuning choices requiring user perceptual approval, not proof of visual quality.
+
+### Follow-up validation evidence
+
+- Reproduced the original helper defect by clicking the needle illustration at Device Hub coordinates (1150, 1310): no action. After the fix, the same coordinate opens its confirmation dialog. The Karıştır and Kalp illustrations also open their dialogs. These are coordinate clicks, not accessibility activation.
+- Coordinate clicks also exercised Settings, modal close, modal primary action, Resume, the gold counter and a store purchase (200 game gold; heart stock 0 → 1). No real payment was involved.
+- Activated that heart through real board coordinate clicks. Score changed from 4,020 to 4,500, moves from 13 to 12. Interaction returned after the effect.
+- `impact-v3-silent.mp4` is the actual simulator recording, without an audio track. `impact-v3-measurement.json` estimates logo displacement from that recording: peak horizontal shift 44 physical pixels on the 3× simulator image (about 14.7 points, with four-pixel measurement quantization). This establishes rendered displacement, not subjective quality or frame-rate performance.
+- Music setting is enabled in the installed app. The source is a 40-second musical composition, not a water ambience loop. Human listening approval remains outstanding.
+- TypeScript, Expo lint and all 17 tests pass after these changes.

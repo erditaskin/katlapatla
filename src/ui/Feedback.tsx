@@ -17,15 +17,46 @@ import {
   type StyleProp,
   type ViewStyle,
 } from "react-native";
-import { useAudioPlayer } from "expo-audio";
+import { useAudioPlayer, setAudioModeAsync } from "expo-audio";
 import * as Haptics from "expo-haptics";
 import { useSave } from "../state/store";
 const Feedback = createContext({ reducedMotion: false, press: () => {} });
 export function FeedbackProvider({ children }: { children: React.ReactNode }) {
-  const { save } = useSave();
+  const { save, ready } = useSave();
   const [systemReduced, setSystemReduced] = useState(false);
   const player = useAudioPlayer(require("../../assets/audio/ui-click.wav"));
   const serial = useRef(0);
+  const music = useAudioPlayer(require("../../assets/audio/desert-mystic.m4a"));
+  useEffect(() => {
+    let mounted = true;
+    music.loop = true;
+    music.volume = 0.38;
+    void setAudioModeAsync({
+      playsInSilentMode: false,
+      shouldPlayInBackground: false,
+    })
+      .then(() => {
+        if (
+          mounted &&
+          ready &&
+          save.settings.music &&
+          AppState.currentState === "active"
+        )
+          music.play();
+      })
+      .catch(() => {});
+    if (!ready || !save.settings.music) music.pause();
+    const sub = AppState.addEventListener("change", (state) => {
+      if (state === "active" && ready && save.settings.music) music.play();
+      else music.pause();
+    });
+    return () => {
+      mounted = false;
+      sub.remove();
+      music.pause();
+    };
+  }, [music, ready, save.settings.music]);
+
   useEffect(() => {
     let active = true;
     void AccessibilityInfo.isReduceMotionEnabled().then((v) => {

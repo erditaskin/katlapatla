@@ -8,7 +8,7 @@ export function impactForWave(count: number, combo: number, special: boolean) {
         : "small";
   return {
     tier,
-    amplitude: tier === "large" ? 5.5 : tier === "medium" ? 2.4 : 0.65,
+    amplitude: tier === "large" ? 14 : tier === "medium" ? 6 : 1.8,
     popMs: 410,
     fallMs: 230,
     emitters: Math.min(count, 14),

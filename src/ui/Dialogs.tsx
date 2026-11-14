@@ -94,7 +94,7 @@ export function CommonDialog({
       <Popup title="AYARLAR" close={close}>
         {(
           [
-            ["music", "Ortam sesi"],
+            ["music", "Müzik"],
             ["sound", "Ses efektleri"],
             ["haptics", "Titreşim"],
             ["reducedMotion", "Azaltılmış hareket"],

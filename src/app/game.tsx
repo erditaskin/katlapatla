@@ -31,7 +31,7 @@ import {
 } from "../ui/components";
 import { Header } from "../ui/Header";
 import { CommonDialog, Popup, TextLink } from "../ui/Dialogs";
-import { useFeedback } from "../ui/Feedback";
+import { MotionPressable, useFeedback } from "../ui/Feedback";
 import { impactForWave } from "../ui/impact";
 import { ScoreMeter } from "../ui/ScoreMeter";
 import { levels } from "../game/levels";
@@ -93,7 +93,7 @@ export default function GameScreen() {
             x: n * amplitude,
             y: (i % 2 ? -0.45 : 0.45) * Math.abs(n) * amplitude,
           },
-          duration: i === 0 ? 22 : 34,
+          duration: i === 0 ? 30 : 46,
           useNativeDriver: true,
         }),
       ),
@@ -349,27 +349,35 @@ export default function GameScreen() {
               ["heart", "Kalp", "horizontal"],
             ] as const
           ).map(([key, label, icon]) => (
-            <View key={key} style={{ flex: 1 }}>
-              <Panel style={{ padding: 6, alignItems: "center" }}>
-                <View style={{ position: "absolute", right: 9, top: 4 }}>
-                  <Label size={16}>{save.helpers[key]}</Label>
-                </View>
-                <Icon name={icon} size={45} />
-                <TextLink
-                  label={label}
-                  onPress={() => {
-                    if (busy || game.phase !== "playing") return;
-                    if (save.helpers[key] < 1) {
-                      setHint(
-                        "Bu yardımcı kalmadı. Mağazadan altınla alabilirsin.",
-                      );
-                      return;
-                    }
-                    setHelper(key);
-                  }}
-                />
-              </Panel>
-            </View>
+            <MotionPressable
+              key={key}
+              wrapperStyle={{ flex: 1 }}
+              accessibilityRole="button"
+              accessibilityLabel={`${label}, ${save.helpers[key]} adet`}
+              testID={`helper-${key}`}
+              disabled={busy || paused || game.phase !== "playing"}
+              onPress={() => {
+                if (save.helpers[key] < 1) {
+                  setHint(
+                    "Bu yardımcı kalmadı. Mağazadan altınla alabilirsin.",
+                  );
+                  return;
+                }
+                setHelper(key);
+              }}
+            >
+              <View pointerEvents="none">
+                <Panel style={{ padding: 6, alignItems: "center" }}>
+                  <View style={{ position: "absolute", right: 9, top: 4 }}>
+                    <Label size={16}>{save.helpers[key]}</Label>
+                  </View>
+                  <Icon name={icon} size={45} />
+                  <View style={{ minHeight: 44, justifyContent: "center" }}>
+                    <Label size={18}>{label}</Label>
+                  </View>
+                </Panel>
+              </View>
+            </MotionPressable>
           ))}
         </View>
       </View>

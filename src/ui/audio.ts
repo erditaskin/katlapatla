@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/immutability -- Expo Audio players are imperative native handles; their documented setters do not mutate React state. */
-import { useAudioPlayer, setAudioModeAsync } from "expo-audio";
+import { useAudioPlayer } from "expo-audio";
 import * as Haptics from "expo-haptics";
 import { useEffect, useRef } from "react";
 import { AppState } from "react-native";
@@ -13,34 +13,21 @@ export function useWaterAudio() {
   const cascade = useAudioPlayer(require("../../assets/audio/cascade.wav"));
   const burst = useAudioPlayer(require("../../assets/audio/burst.wav"));
   const invalid = useAudioPlayer(require("../../assets/audio/invalid.wav"));
-  const music = useAudioPlayer(require("../../assets/audio/temple.wav"));
   const voices = useRef<(typeof pop)[]>([]);
   const sequence = useRef(0);
   const variant = useRef(0);
   const active = useRef(true);
   useEffect(() => {
-    void setAudioModeAsync({
-      playsInSilentMode: false,
-      shouldPlayInBackground: false,
-    }).catch(() => {});
-  }, []);
-  useEffect(() => {
-    music.loop = true;
-    music.volume = 0.16;
-    if (save.settings.music) music.play();
-    else music.pause();
     const sub = AppState.addEventListener("change", (s) => {
       active.current = s === "active";
-      if (s === "active" && save.settings.music) music.play();
-      else {
-        music.pause();
+      if (!active.current) {
         sequence.current++;
         voices.current.forEach((p) => p.pause());
         voices.current = [];
       }
     });
     return () => sub.remove();
-  }, [music, save.settings.music]);
+  }, []);
   useEffect(() => {
     if (!save.settings.sound) {
       sequence.current++;

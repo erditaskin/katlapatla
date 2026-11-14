@@ -1,0 +1,179 @@
+{
+  "method": "Logo crop template displacement; quarter-resolution, 60 sampled frames per second; pixels refer to 3x simulator image, quantized to four pixels. Not FPS profiling.",
+  "frames": [
+    {
+      "time": 9.517,
+      "dxPixels": 20,
+      "dyPixels": 8,
+      "error": 7.73
+    },
+    {
+      "time": 9.533,
+      "dxPixels": 20,
+      "dyPixels": 8,
+      "error": 7.73
+    },
+    {
+      "time": 9.55,
+      "dxPixels": 44,
+      "dyPixels": 20,
+      "error": 9.72
+    },
+    {
+      "time": 9.567,
+      "dxPixels": 44,
+      "dyPixels": 20,
+      "error": 9.72
+    },
+    {
+      "time": 9.583,
+      "dxPixels": -12,
+      "dyPixels": -8,
+      "error": 10.94
+    },
+    {
+      "time": 9.6,
+      "dxPixels": -12,
+      "dyPixels": -8,
+      "error": 10.94
+    },
+    {
+      "time": 9.617,
+      "dxPixels": -32,
+      "dyPixels": -16,
+      "error": 7.92
+    },
+    {
+      "time": 9.633,
+      "dxPixels": -20,
+      "dyPixels": -8,
+      "error": 8.18
+    },
+    {
+      "time": 9.65,
+      "dxPixels": 24,
+      "dyPixels": 12,
+      "error": 6.89
+    },
+    {
+      "time": 9.667,
+      "dxPixels": 24,
+      "dyPixels": 12,
+      "error": 6.89
+    },
+    {
+      "time": 9.683,
+      "dxPixels": 24,
+      "dyPixels": 12,
+      "error": 6.89
+    },
+    {
+      "time": 9.7,
+      "dxPixels": -8,
+      "dyPixels": -4,
+      "error": 2.96
+    },
+    {
+      "time": 9.717,
+      "dxPixels": -20,
+      "dyPixels": -8,
+      "error": 6.58
+    },
+    {
+      "time": 9.733,
+      "dxPixels": -20,
+      "dyPixels": -8,
+      "error": 6.58
+    },
+    {
+      "time": 9.75,
+      "dxPixels": -20,
+      "dyPixels": -8,
+      "error": 6.58
+    },
+    {
+      "time": 9.767,
+      "dxPixels": 4,
+      "dyPixels": 0,
+      "error": 5.73
+    },
+    {
+      "time": 9.783,
+      "dxPixels": 4,
+      "dyPixels": 0,
+      "error": 5.73
+    },
+    {
+      "time": 9.8,
+      "dxPixels": 12,
+      "dyPixels": 4,
+      "error": 4.17
+    },
+    {
+      "time": 9.817,
+      "dxPixels": 8,
+      "dyPixels": 4,
+      "error": 3.8
+    },
+    {
+      "time": 9.833,
+      "dxPixels": 8,
+      "dyPixels": 4,
+      "error": 3.8
+    },
+    {
+      "time": 9.867,
+      "dxPixels": -4,
+      "dyPixels": -4,
+      "error": 6.84
+    },
+    {
+      "time": 9.883,
+      "dxPixels": -4,
+      "dyPixels": -4,
+      "error": 6.84
+    },
+    {
+      "time": 9.9,
+      "dxPixels": -4,
+      "dyPixels": -4,
+      "error": 6.86
+    },
+    {
+      "time": 9.917,
+      "dxPixels": -4,
+      "dyPixels": -4,
+      "error": 6.86
+    },
+    {
+      "time": 9.933,
+      "dxPixels": -4,
+      "dyPixels": -4,
+      "error": 6.86
+    },
+    {
+      "time": 9.95,
+      "dxPixels": -4,
+      "dyPixels": -4,
+      "error": 6.87
+    },
+    {
+      "time": 9.967,
+      "dxPixels": -4,
+      "dyPixels": -4,
+      "error": 6.86
+    },
+    {
+      "time": 9.983,
+      "dxPixels": -4,
+      "dyPixels": -4,
+      "error": 6.86
+    },
+    {
+      "time": 10.0,
+      "dxPixels": -4,
+      "dyPixels": -4,
+      "error": 6.86
+    }
+  ]
+}
